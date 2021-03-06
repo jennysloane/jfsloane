@@ -1,52 +1,40 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: My research interests include studying cognitive psychology, coding experiments, analyzing data, and computational modeling
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
+  - course: Masters of Science in Experimental Psychology
+    institution: Syracuse University
+    year: 2017
+  - course: BA in Psychology
+    institution: University of Maryland
+    year: 2014
+email: "j.sloane@unsw.edu.au"
 highlight_name: false
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Data Science
+- Data Analysis/Statistics
+- Experimental Psychology
+- Teaching and Mentoring 
+- RLadies
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: University of New South Wales
+  url: ""
+role: PhD Student in Cognitive Psychology
 social:
 - icon: envelope
   icon_pack: fas
-  link: /#contact
-- display:
-    header: true
-  icon: twitter
+  link: '#contact'
+- icon: twitter
   icon_pack: fab
-  label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
-- icon: graduation-cap
-  icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://twitter.com/jfsloane
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://github.com/jennysloane
+
 superuser: true
-title: Nelson Bighetti
+title: Jenny Sloane
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a PhD student studying cognitive psychology at UNSW. I received my BA in psychology from the University of Maryland and my Masters of Science in experimental psychology from Syracuse University. My research interests include studying the effects of interruptions and time-pressure on decision-making. I have several years of experience as a teaching assistant for a range of psychology courses. I am also a member of the UNSW Women in Maths and Science Champions Program, where I participate in outreach activities to encourage and inspire women to pursue careers in math and science.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Sloane_Resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
