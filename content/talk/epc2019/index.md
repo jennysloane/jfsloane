@@ -20,7 +20,9 @@ summary:
 tags: [] 
 title: "What's Lagging in our Understanding of Interruptions?: Effects of Interruption Lags in Sequential Decision-Making"
 url_code: "" 
-url_pdf: "files/EPC_Sloane.pdf"
-url_slides: 
+url_pdf: ""
+url_slides: "EPC_Sloane.pptx" 
 url_video: ""
 ---
+## **Abstract** <br>
+Interruptions are a common occurrence in daily life and can often lead to errors, especially if they occur during sequential decisions. Previous research suggests that interruptions can decrease performance and increase errors and response time. Additionally, there is evidence that providing a lag time prior to an interruption can mitigate some of the interruption costs. We use a novel binary decision tree paradigm to investigate the effects of interruptions and interruption lags in sequential decision-making. We manipulate the difficulty of the task and type of interruption and predict that interruptions will decrease performance when the task is difficult, but that this will be attenuated by interruption lag. The results indicate that there is a potential benefit to including a lag time when presented with an interruption.

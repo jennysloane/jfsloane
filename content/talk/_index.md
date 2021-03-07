@@ -3,5 +3,6 @@ header:
   caption: ""
   image: ""
 title: Recent Talks and Posters
-view: 2
+
+type: widget_page
 ---
