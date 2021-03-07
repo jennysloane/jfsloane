@@ -29,9 +29,9 @@ email: j.sloane@unsw.edu.au
 #  postcode: '94305'
 #  country: United States
 #  country_code: US
-coordinates:
-  latitude: '37.4275'
-  longitude: '-122.1697'
+# coordinates:
+#  latitude: '37.4275'
+#  longitude: '-122.1697'
 # directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
 # office_hours:
 #   - 'Monday 10:00 to 13:00'
@@ -47,7 +47,7 @@ contact_links:
 
 main_menu:
   enable: true
-  align: l
+  align: r
   show_logo: true
   show_language: false
   show_day_night: true
@@ -99,7 +99,7 @@ abstract_length: 135
 plugins_js: []
 avatar:
   gravatar: false
-  shape: circle
+  shape: square
 publications:
   date_format: January 2006
   citation_style: apa
@@ -145,4 +145,4 @@ cms:
   local_backend: false
 icon:
   pack:
-    ai: false
+    ai: true
