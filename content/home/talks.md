@@ -9,12 +9,12 @@ headless: true
 # Order that this section appears on the page.
 weight: 70
 
-title: 'Recent & Upcoming Talks'
+title: 'Recent Talks and Posters'
 subtitle:
 
 content:
   # Page type to display. E.g. post, event, publication...
-  page_type: event
+  page_type: talks
   # Choose how many pages you would like to display (0 = all pages)
   count: 5
   # Filter on criteria
