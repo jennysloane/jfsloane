@@ -45,10 +45,6 @@ feature:
   icon_pack: ai
   name: Open Science Framework
 
-- description: 'In addition to JavaScript, I often use Python to code my psychology experiments. I have a couple of years of experience using Python.'
-  icon: python
-  icon_pack: fab
-  name: Python
 
 # Uncomment to use emoji icons.
 #- icon = ":smile:"
