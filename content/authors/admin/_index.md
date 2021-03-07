@@ -29,7 +29,10 @@ social:
   link: https://twitter.com/jfsloane
 - icon: github
   icon_pack: fab
-  link: https://github.com/jennysloane
+  link: https://github.com/jennysloane  
+- icon: linkedin-in
+  icon_pack: fab
+  link: https://www.linkedin.com/in/jenny-sloane/  
 
 superuser: true
 title: Jenny Sloane
