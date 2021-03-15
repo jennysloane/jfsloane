@@ -19,3 +19,6 @@ main:
   - name: Contact
     url: '#contact'
     weight: 80
+  - name: Twitter
+    url: '#Twitter'
+    weight: 90
