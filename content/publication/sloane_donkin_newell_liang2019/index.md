@@ -36,4 +36,4 @@ url_source: ""
 url_video: ""
 ---
 
-
+<a class="twitter-timeline" href="https://twitter.com/jfsloane?ref_src=twsrc%5Etfw">Tweets by jfsloane</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
