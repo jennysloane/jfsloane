@@ -32,9 +32,9 @@ experience:
     description: |2-
         Responsibilities include:
         
-        *  <a href= "https://www.scientia.unsw.edu.au/scientia-phd-scholarships" target="_blank" rel="noopener noreferrer" style="color: MediumSeaGreen">Scientia Scholar</a> studying the effects of interruptions and time-pressure on decision-making
-        * PhD mentor for high school students in the Cognitive Science <a href = "https://www.science.unsw.edu.au/engagement/scix-school-extension-program" targert="_blank" rel="noopener noreferrer" style="color: MediumSeaGreen">SciX Program</a> at UNSW
-        * Member of the <a href = "https://www.science.unsw.edu.au/engagement/unsw-women-maths-science-champions-program" target="_blank" rel="noopener noreferrer" style="color: MediumSeaGreen">UNSW Women in Maths and Science Champions Program</a> and co-editor of the <a href="https://blogs.unsw.edu.au/mathssciencechampions/" target="_blank" rel="noopener noreferrer" style="color: MediumSeaGreen">blog</a>
+        *  <a href= "https://www.scientia.unsw.edu.au/scientia-phd-scholarships" target="_blank" rel="noopener noreferrer" style="color: #F76F8E">Scientia Scholar</a> studying the effects of interruptions and time-pressure on decision-making
+        * PhD mentor for high school students in the Cognitive Science <a href = "https://www.science.unsw.edu.au/engagement/scix-school-extension-program" targert="_blank" rel="noopener noreferrer" style="color: #F76F8E">SciX Program</a> at UNSW
+        * Member of the <a href = "https://www.science.unsw.edu.au/engagement/unsw-women-maths-science-champions-program" target="_blank" rel="noopener noreferrer" style="color: #F76F8E">UNSW Women in Maths and Science Champions Program</a> and co-editor of the <a href="https://blogs.unsw.edu.au/mathssciencechampions/" target="_blank" rel="noopener noreferrer" style="color: #F76F8E">blog</a>
         * Teaching assistant for "Research Methods"
 
   - title: Graduate Student

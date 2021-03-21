@@ -1,0 +1,22 @@
+# custom theme
+name = "Runsw"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#247BA0" # 
+
+# Menu
+menu_primary = "#247BA0" # "#0A1045" # blue background of the top bar 
+menu_text = "#E2E2E2" 
+menu_text_active = "#E6C229" # highlight yellow
+menu_title = "#E6C229" 
+
+# Home sections - page background color
+home_section_odd = "#FFFFFC" # very pale blue
+home_section_even = "#FFFFFC"
+
+[dark]
+  link = "#DBF4A7"
+  link_hover = "#DBF4A7"
