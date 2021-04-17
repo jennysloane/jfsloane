@@ -10,8 +10,8 @@ primary = "#247BA0" #
 # Menu
 menu_primary = "#247BA0" # "#0A1045" # blue background of the top bar 
 menu_text = "#E2E2E2" 
-menu_text_active = "#E6C229" # highlight yellow
-menu_title = "#E6C229" 
+menu_text_active = "#000000" # highlight yellow
+menu_title = "#000000" 
 
 # Home sections - page background color
 home_section_odd = "#FFFFFC" # very pale blue

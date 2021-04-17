@@ -1,0 +1,12 @@
+# Font style metadata
+name = "lato"
+
+# Optional Google font URL
+# google_fonts = "family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700"
+ google_fonts = "family=Lato:wght@400;700&family=Lato&family=Lato:wght@400;700"
+
+# Font families
+heading_font = "Lato"
+body_font = "Lato"
+nav_font = "Lato"
+mono_font = "Lato"

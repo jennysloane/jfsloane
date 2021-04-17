@@ -7,7 +7,7 @@
 
 theme: custom_blue
 day_night: false
-font: 'Native'
+font: 'lato'
 font_size: L
 
 # SEO
