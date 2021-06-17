@@ -10,7 +10,7 @@ image:
   focal_point: ""
 projects: []
 subtitle: 
-summary: This blog is a step-by-step guide to building a website in R using blogdown
+summary: This blog is a step-by-step guide to building websites in R using blogdown
 tags: []
 title: R blogdown
 ---
