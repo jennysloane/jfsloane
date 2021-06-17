@@ -17,7 +17,7 @@ title: R blogdown
 
 - This blog post is to help others build a website for the first time! (...and also to remind me of all the steps if I ever need to build another website in the future)
 - I made this website and also helped to build the [UNSW CodeRs website](https://unsw-coders.netlify.app/) using blogdown
-- I highly recommend also checking out Alison Hill's blogdown [blog](https://alison.rbind.io/blog/2020-12-new-year-new-blogdown/). This is an incredibly useful resource and definitely helped me learn how to use blogdown
+- I also highly recommend checking out Alison Hill's blogdown [blog](https://alison.rbind.io/blog/2020-12-new-year-new-blogdown/). This is an incredibly useful resource and definitely helped me learn how to use blogdown
 
 ## To create your website, you will need: Rstudio, Git, Github, and Netlify
 
