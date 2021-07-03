@@ -17,7 +17,14 @@ title: R blogdown
 
 - This blog post is to help others build a website for the first time! (...and also to remind me of all the steps if I ever need to build another website in the future)
 - I made this website and also helped to build the [UNSW CodeRs website](https://unsw-coders.netlify.app/) using blogdown
+
+## Additional Resources 
+- To go along with this blog, Tehilla Ostrovsky and I have posted tutorials on YouTube for how to build an academic website using R blogdown. You can check out our YouTube Playlist [here](https://www.youtube.com/playlist?list=PLpZT7JPM8_GbPiX4ibrP7ogl7GyEofZMj). More videos to come!
 - I also highly recommend checking out Alison Hill's blogdown [blog](https://alison.rbind.io/blog/2020-12-new-year-new-blogdown/). This is an incredibly useful resource and definitely helped me learn how to use blogdown
+- And finally here's an [r-bloggers website](https://www.r-bloggers.com/2020/02/what-to-know-before-you-adopt-hugo-blogdown/) with useful information on Hugo and blogdown
+
+*<span style="color: red;">Please note: </span>  This blog and the YouTube tutorials were created using hugo_version '0.81.0' and with the "wowchemy/starter-academic", but there have been recent updates, so this repo may be outdated. We will post updates soon!*
+
 
 ## To create your website, you will need: Rstudio, Git, Github, and Netlify
 
@@ -43,16 +50,16 @@ install_hugo(version = "0.81.0", force = TRUE)
 ```
 
 - Now you have to choose your hugo theme, so go to [https://themes.gohugo.io/](https://themes.gohugo.io/) and choose the theme you want 
-- For the academic theme, select "Academic", click homepage, select "Skills" and then star on github. Copy the full repository name "wowchemy/starter-academic"
+- For the academic theme, select "Academic", click homepage, select "Skills" and then star on github. Copy the full repository name "wowchemy/starter-academic" 
+  - *update: it looks like this repo is currently unavailable, so we'll be using one Tehilla created "tehillamo/academic-theme"*
 - Go back to Rstudio to create your site with your selected theme. Just paste the theme name in like below
 - Type y to serve and preview the site
 - This may take a little while because it has to create the entire site. When it's done, you'll see all the files appear in Rstudio 
 
 ```{r eval=FALSE}
-#new_site(theme = "wowchemy/starter-academic")
+#new_site(theme = "wowchemy/starter-academic") 
 
 new_site(theme = "tehillamo/academic-theme")
-
 ```
 
 - If you wish to stop serving your site, use this code:
@@ -61,9 +68,12 @@ stop_server()
 ```
 
 - Next, you have to edit add a couple of lines to .gitignore (see code below)
+
 ```{r eval=FALSE}
 file.edit(".gitignore")
+```
 
+```{r eval=FALSE}
 # make sure you have all of this (you'll need to add the last 2 lines):
 .Rproj.user
 .Rhistory
@@ -71,8 +81,10 @@ file.edit(".gitignore")
 .Ruserdata
 .DS_Store 
 Thumbs.db 
+```
 
-blogdown::check_gitignore() # check that everything is good to go
+```{r eval=FALSE}
+check_gitignore() # check that everything is good to go
 ```
 
 ![](check_gitignore.png)
@@ -89,7 +101,9 @@ blogdown::check_gitignore() # check that everything is good to go
 Thumbs.db
 /public
 /resources
+```
 
+```{r eval=FALSE}
 check_content()
 ```
 
