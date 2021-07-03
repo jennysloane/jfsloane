@@ -39,7 +39,7 @@ title: R blogdown
 install.packages("blogdown")
 library(blogdown)
 
-install_hugo()
+install_hugo(version = "0.81.0", force = TRUE)
 ```
 
 - Now you have to choose your hugo theme, so go to [https://themes.gohugo.io/](https://themes.gohugo.io/) and choose the theme you want 
@@ -49,7 +49,10 @@ install_hugo()
 - This may take a little while because it has to create the entire site. When it's done, you'll see all the files appear in Rstudio 
 
 ```{r eval=FALSE}
-new_site(theme = "wowchemy/starter-academic")
+#new_site(theme = "wowchemy/starter-academic")
+
+new_site(theme = "tehillamo/academic-theme")
+
 ```
 
 - If you wish to stop serving your site, use this code:
