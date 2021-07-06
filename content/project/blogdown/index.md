@@ -18,28 +18,25 @@ title: R blogdown
 - This blog post is to help others build a website for the first time! (...and also to remind me of all the steps if I ever need to build another website in the future)
 - I made this website and also helped to build the [UNSW CodeRs website](https://unsw-coders.netlify.app/) using blogdown
 
-## Additional Resources 
-- To go along with this blog, Tehilla Ostrovsky and I have posted tutorials on YouTube for how to build an academic website using R blogdown. You can check out our YouTube Playlist [here](https://www.youtube.com/playlist?list=PLpZT7JPM8_GbPiX4ibrP7ogl7GyEofZMj). More videos to come!
-- I also highly recommend checking out Alison Hill's blogdown [blog](https://alison.rbind.io/blog/2020-12-new-year-new-blogdown/). This is an incredibly useful resource and definitely helped me learn how to use blogdown
-- And finally here's an [r-bloggers website](https://www.r-bloggers.com/2020/02/what-to-know-before-you-adopt-hugo-blogdown/) with useful information on Hugo and blogdown
 
-*<span style="color: red;">Please note: </span>  This blog and the YouTube tutorials were created using hugo_version '0.81.0' and with the "wowchemy/starter-academic", but there have been recent updates, so this repo may be outdated. We will post updates soon!*
+*<span style="color: red;">Please note: </span>  This blog was originally created using hugo_version '0.81.0' and with the "wowchemy/starter-academic", but there have been recent updates to this repo, so we have created a temporary repo for the time being.*
 
 
-## To create your website, you will need: Rstudio, Git, Github, and Netlify
+## Step 1: To create your website, you will need: Rstudio, Git, Github, and Netlify
 
 - Rstudio: you can make changes to the content and serve the site locally
 - Github: version control and syncs with Netlify
 - Netlify: Builds and publishes the website using your Github repository
 
-## Rstudio, Git, Github Setup
+## Step 2: Rstudio, Git, Github Setup
 
 - **Rstudio and Git must be installed**
+- We recommend using Github rather than Github Desktop so you can follow along with these steps
 - Login to Github or create an account and create a new repository with a readME file
 - Click on the green Code button where you would go to download the repo, and click on the clipboard to copy the HTTPS url
 - In Rstudio, go File &rarr; New Project.. &rarr; Version Control &rarr; Git &rarr; and paste the url that you copied from github (this will create an empty project with just your readME file)
 
-## Rstudio 
+## Step 3: Rstudio 
 - Install blogdown and hugo (you may need to install devtools also)
 
 ```{r message=FALSE, warning=FALSE, eval=FALSE}
@@ -57,8 +54,6 @@ install_hugo(version = "0.81.0", force = TRUE)
 - This may take a little while because it has to create the entire site. When it's done, you'll see all the files appear in Rstudio 
 
 ```{r eval=FALSE}
-#new_site(theme = "wowchemy/starter-academic") 
-
 new_site(theme = "tehillamo/academic-theme")
 ```
 
@@ -107,7 +102,7 @@ Thumbs.db
 check_content()
 ```
 
-## Stage, Commit, Push to Github
+## Step 4: Stage, Commit, Push to Github
 
 - Now go to Tools &rarr; shell and you'll see you're already in the correct directory
 - The first time you **stage** everything you want to do it through the shell because there's so much. I've found it sometimes crashes if you try to stage too much through RStuido
@@ -127,13 +122,13 @@ git add -A # this will add everything
 - To make sure everything worked, go to your github account and check that it's all there
 - ***Remember: Stage, Commit, Push***
 
-## Netlify 
+## Step 5: Netlify 
 
 - Go to [Netlify](https://www.netlify.com/) and login or sign up (sign up through Github)
 - Click New site from Git (may need to give permissions)
 - Click Continuous Deployment select Github
 - Select the project with your website repo
-- You should be able to keep the basic build default settings (Build command: hugo)
+- You should be able to keep the basic build default settings 
 - But click on show advance and select new variable
 - Key = HUGO_VERSION and Value = 0.81.0 (go to RStudio and type `hugo_version()` to make sure you enter the correct version number)
 - Deploy site! 
@@ -152,3 +147,9 @@ check_hugo()
 ```
 
 ## Your website should be up and running now :) 
+
+## Additional Resources 
+- To go along with this blog, Tehilla Ostrovsky and I have posted tutorials on YouTube for how to build an academic website using R blogdown. You can check out our YouTube Playlist [here](https://www.youtube.com/playlist?list=PLpZT7JPM8_GbPiX4ibrP7ogl7GyEofZMj). More videos to come! 
+  - Please note these tutorials were also created using hugo version '0.81.0' and the "wowchemy/starter-academic" theme, so we recommend following the steps in this blog as it's been updated
+- I also highly recommend checking out Alison Hill's blogdown [blog](https://alison.rbind.io/blog/2020-12-new-year-new-blogdown/). This is an incredibly useful resource and definitely helped me learn how to use blogdown
+- And finally here's an [r-bloggers website](https://www.r-bloggers.com/2020/02/what-to-know-before-you-adopt-hugo-blogdown/) with useful information on Hugo and blogdown
