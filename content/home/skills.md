@@ -19,7 +19,6 @@ feature:
 
 
 
-
 - description: 'I have been using R since the start of my graduate studies in 2015. I essentially use R for all my data analysis, modeling, and visualization. This year, I designed my first <a href="https://j-sloane-92.shinyapps.io/babynames/" target="_blank" rel="noopener noreferrer" style="color: #F76F8E">Shiny App</a> (an interactive website to explore a dataset on baby names in Australia) in R.'
   icon: r-project
   icon_pack: fab
