@@ -1,0 +1,189 @@
+---
+authors:
+- admin
+date: "2021-08-17T00:00:00Z"
+draft: false
+featured: false
+image: 
+  caption: ""
+  focal_point: ""
+subtitle: 
+summary: In this blog, I share my experience using an API for the first time
+title: My First API - which NFL games should I watch?
+---
+
+Growing up in Baltimore MD, I've been a **huge** Ravens fan my entire life. I've always loved American football and I try to watch as many games as I can... regardless of where I'm living in the world. The problem is there are just too many games to watch in any given week. Therefore, my goal for this project was to create a program that tells me the "top" games of the week, depending on a criteria I've created. So what's my criteria?
+
+
+1) **Favorite teams**: Obviously Baltimore Ravens!! And Kansas City Chiefs (for my partner)
+2) **Close games**: Final score within 7 points & combine total score > 35
+3) **High scoring games**: Total score >= 40
+4) **Multiple lead changes**: At least 2 lead changes from quarter to quarter
+
+## Helpful resources on APIs
+- While I won't go into too much detail about APIs, here are some resources I found particularly useful
+- [R API tutorial](https://www.dataquest.io/blog/r-api-tutorial/)
+- [Using Web APIs from R](https://www.rstudio.com/resources/rstudioconf-2017/using-web-apis-from-r/)
+
+### Load libraries
+```{r}
+library(tidyverse)
+library(janitor)
+library(httr)
+library(jsonlite)
+library(RCurl)
+library(kableExtra)
+library(gmailr)
+library(glue)
+library(mysportsfeedsR)
+```
+
+### Set parameters
+```{r}
+season = "pre" # "pre" or "regular"
+n_week = 2 # week number
+
+close_game_points = 7
+close_game_points_total = 35
+high_score_points = 40
+```
+
+## Getting the data
+- I'll be using data from [https://www.mysportsfeeds.com/](https://www.mysportsfeeds.com/)
+- endpoint example = 'https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-pre/week/1/games.json'
+  - parameters: pre vs regular (season) and week number
+  - need to have authorization to access this data 
+
+## GET request 
+- This was by far the most challenging part! It's only a few lines of code, but it took me hours to figure out the formatting of everything
+- Incredibly useful packages: `httr` and `jsonlite`
+  - httr::GET to send a request to the API
+  - httr::content to convert our response into a character 
+  - jsonlite::fromJSON to convert a JSON object to an R object (needs to be a character)
+- API documentation from the website I'm using specifically says - "Authorization: Basic {encrypted_api_key_credentials}"
+  - {encrypted_api_key_credentials} = api_key_token + ":" + password
+  - and then encoding it with base64 encoding
+- Status: 200 is what we want to see
+```{r}
+source("login_creds.R")
+
+res = GET(glue('https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-{season}/week/{n_week}/games.json'), 
+          add_headers(Authorization = paste("Basic", auth)))
+res # response
+
+api_response <- content(res, as="text")
+api_response <- jsonlite::fromJSON(api_response, flatten=TRUE) # flatten=TRUE automatically flattens nested data into a single non-nested data frame
+
+games_raw <- api_response$games # selecting the data I want
+```
+
+
+# pre-made function 
+[MySportsFeed Github R](https://github.com/MySportsFeeds/mysportsfeeds-r)
+
+- first, install: devtools::install_github("MySportsFeeds/mysportsfeeds-r")
+- authenticate using api key
+- msf_get_results() to get a request for a specific feed and can specify parameters
+- example of json: 'https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-pre/week/1/games.json'
+```{r}
+# authenticate_v2_x('a9e5d80d-c724-4407-a01d-742fc9')
+# 
+# weekly_games <- msf_get_results(version='2.0',
+#                                 league='nfl',
+#                                 season='2021-pre',
+#                                 feed='weekly_games',
+#                                 params=list(week=1))
+# 
+# games_raw <- weekly_games$api_json$games
+
+```
+- Format data so it's R friendly 
+- Clean and organize data
+- Email results, so all I have to do is run the script and I'll get an email with all the games I should watch :) 
+
+
+# clean data
+```{r} 
+games_clean <- games_raw %>%
+  as_tibble() %>%
+  clean_names() %>%
+  select(schedule_week, schedule_away_team_abbreviation, schedule_home_team_abbreviation, score_away_score_total, score_home_score_total, score_quarters) %>%
+  rename(away_team = schedule_away_team_abbreviation,
+         home_team = schedule_home_team_abbreviation,
+         away_score_final = score_away_score_total,
+         home_score_final = score_home_score_total) %>%
+      unnest(score_quarters)
+
+```
+
+# what games to watch?? 
+
+```{r}
+games <- games_clean %>%
+  mutate(final_score_diff = abs(away_score_final-home_score_final), 
+         total_score_combine = away_score_final+home_score_final)
+
+ravens_chiefs <- games %>%
+  filter(away_team %in% c("BAL", "KC") | home_team %in% c("BAL", "KC"))
+
+close_games <- games %>%
+  filter(final_score_diff <= close_game_points & total_score_combine > close_game_points_total)
+
+high_games <- games %>%
+  filter(total_score_combine >= high_score_points)
+  
+lead_change <- games %>%
+  select(away_team, home_team, quarterNumber, awayScore, homeScore) %>%
+  group_by(away_team, home_team) %>%
+  mutate(cum_away_score = cumsum(awayScore),
+         cum_home_score = cumsum(homeScore)) %>%
+  mutate(q_score_diff = cum_away_score - cum_home_score, # negative means away team in the lead
+         q_score_diff_sign = sign(q_score_diff)) %>% # just makes it easier to read either + or - 1
+  summarise(sign_diff_sum = sum(diff(sign(q_score_diff_sign)) != 0)) %>% # how many sign changes are there with each game
+  filter(sign_diff_sum >= 2) 
+
+```
+
+# combine all mini datasets together
+- *only need to get the team names for each*
+```{r}
+common_cols <- intersect(colnames(ravens_chiefs), colnames(lead_change)) # only want the common columns (team names)
+
+final_games <- rbind(
+  subset(ravens_chiefs, select = common_cols), 
+  subset(close_games, select = common_cols),
+  subset(high_games, select = common_cols), 
+  subset(lead_change, select = common_cols)
+) %>%
+  distinct(away_team, home_team)
+
+```
+
+```{r include=TRUE}
+games_table <- final_games %>%
+  kable() # gt package doesn't work because i
+
+final_games %>%
+  kable()
+```
+
+
+# gmailr
+- enable gmail API
+- [gmailr tutorial](https://www.youtube.com/watch?v=ivP4zUIb6Sw&t=425s)
+```{r}
+gm_auth_configure(key = key, secret = secret)
+
+email_msg <- glue("Here are your top NFL games to watch this week!! <br> {games_table} <br> <b>GO RAVENS</b>")
+
+my_html_msg <- gm_mime() %>%
+  gm_to(c("jfsloane92@gmail.com")) %>%
+  gm_from("jsloane1992@gmail.com") %>%
+  gm_subject("NFL Games!") %>%
+  gm_html_body(email_msg)
+
+gm_send_message(my_html_msg)
+
+```
+
+

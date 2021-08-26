@@ -1,0 +1,22 @@
+---
+title: "schedule_nfl"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+I tried to set up the task scheduler to automate running the script, but I don't think it will work because every time the script runs, I need to manually enter a number 
+```{r}
+library(tidyverse)
+library(taskscheduleR)
+library(here)
+
+nfl_script <- here("nfl_script.R")
+
+taskscheduler_create(taskname = "nfl_script2", rscript = nfl_script, 
+                     schedule = "ONCE", starttime = format(Sys.time() + 62, "%H:%M"))
+```
+
