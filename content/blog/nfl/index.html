@@ -9,24 +9,51 @@ image:
   focal_point: ""
 subtitle: 
 summary: In this blog, I share my experience using an API for the first time
-title: My First API - which NFL games should I watch?
+title: "My First API: Which NFL games should I watch?"
 ---
 
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <!-- have to knit first if .Rmd -->
+<style type="text/css">
+
+body {
+  font-size: 14pt;
+}
+
+h1 { /* Header 1 */
+  font-size: 34px;
+  color: DarkBlue;
+  font-weight: bold;
+}
+
+h2 { /* Header 2 */
+    font-size: 30px;
+    color: DarkBlue;
+    font-weight: bold;
+}
+
+h3 { /* Header 2 */
+  font-size: 26px;
+  color: DarkBlue;
+  font-weight: bold;
+}
+
+</style>
+<p>
 <p>Growing up in Baltimore MD, I’ve been a <strong>huge</strong> Ravens fan for as long as I can remember. I’ve always loved American football and I try to watch as many games as I can… regardless of where I’m living in the world. The problem is there are just too many games to watch in any given week. Therefore, my goal for this project was to create a program that tells me the “top” games of the week, depending on a criteria I’ve created. So what’s my criteria?</p>
 <ol style="list-style-type: decimal">
-<li><strong>Favorite teams</strong>: Obviously Baltimore Ravens!! And Kansas City Chiefs (for my partner)</li>
+<li><strong>Favorite teams</strong>: Obviously <span style="color: MediumSlateBlue;">Baltimore Ravens!!</span> And <span style="color: Red;">Kansas City Chiefs</span> (for my partner)</li>
 <li><strong>Close games</strong>: Final score within 5 points &amp; combine total score &gt; 35</li>
 <li><strong>High scoring games</strong>: Total score &gt;= 40</li>
-<li><strong>Multiple lead changes</strong>: At least 2 lead changes from quarter to quarter</li>
+<li><strong>Multiple lead changes</strong>: At least 2 lead changes from quarter to quarter
+</p></li>
 </ol>
 <div id="helpful-resources-on-apis" class="section level3">
 <h3>Helpful resources on APIs</h3>
 <ul>
-<li>While I won’t go into too much detail about APIs, here are some resources I found particularly useful</li>
+<li>I won’t go into too much detail about APIs, but here are some resources I found particularly useful</li>
 <li><a href="https://www.dataquest.io/blog/r-api-tutorial/">R API tutorial</a></li>
 <li><a href="https://www.rstudio.com/resources/rstudioconf-2017/using-web-apis-from-r/">Using Web APIs from R</a></li>
 </ul>
@@ -35,13 +62,14 @@ title: My First API - which NFL games should I watch?
 <h3>Notes before getting started</h3>
 <ul>
 <li>I’ll be using data from <a href="https://www.mysportsfeeds.com/">https://www.mysportsfeeds.com/</a></li>
-<li>You need authorization to access this API, so only I can successfully run the code because I have the necessary credentials</li>
+<li>You need authorization to access this API, so only I can successfully run the code because I have the necessary credentials saved in a safe location on my computer</li>
 <li>2 incredibly useful packages: <code>httr</code> and <code>jsonlite</code></li>
 </ul>
 </div>
 <div id="load-libraries" class="section level3">
 <h3>Load libraries</h3>
-<pre class="r"><code>library(tidyverse) 
+<pre class="r"><code>library(here)
+library(tidyverse) 
 library(janitor)
 library(httr)
 library(jsonlite)
@@ -54,6 +82,9 @@ library(mysportsfeedsR)</code></pre>
 </div>
 <div id="set-parameters" class="section level3">
 <h3>Set parameters</h3>
+<ul>
+<li>In this blog, I’ll go through an example using 2021 pre-season week 1 data</li>
+</ul>
 <pre class="r"><code># for request
 season = &quot;pre&quot; # &quot;pre&quot; or &quot;regular&quot;
 n_week = 1 # week number
@@ -69,35 +100,38 @@ high_score_points = 40</code></pre>
 <li><p>This was by far the most challenging part! It’s only a few lines of code, but it took me hours to figure out the formatting of everything</p></li>
 <li><p>The API documentation from the website I’m using specifically says:</p>
 <ol style="list-style-type: decimal">
-<li>“Issue a HTTPS GET request to: <a href="https://api.mysportsfeeds.com/v2.1/pull/nfl/%7Bseason%7D/week/%7Bweek%7D/games" class="uri">https://api.mysportsfeeds.com/v2.1/pull/nfl/{season}/week/{week}/games</a>.{format}”</li>
+<li>“Issue a HTTPS GET request to: <code>https://api.mysportsfeeds.com/v2.1/pull/nfl/{season}/week/{week}/games.{format}</code>”</li>
 <li>“Authorization: Basic {encrypted_api_key_credentials}”
 <ul>
 <li>{encrypted_api_key_credentials} = api_key_token + “:” + password</li>
 <li>and then encoding it with base64 encoding</li>
 </ul></li>
 </ol></li>
-<li><p><code>httr::GET()</code> to send a request to the API</p></li>
-<li><p>I’m using the <code>glue()</code> function to paste together my URL string that includes the parameters I’ve set above</p></li>
-<li><p>I’m also using the add_header argument to add the Authorization in the specific way the website has instructed</p>
+<li><p>The first couple of lines of code below are accessing and loading in my credentials and authorization keys<br />
+</p></li>
+<li><p>Then I use <code>httr::GET()</code> to send a request to the API</p></li>
+<li><p>I use the <code>glue()</code> function to paste together my URL string that includes the parameters I’ve set above</p></li>
+<li><p>I also use the add_header argument to add the Authorization in the specific way the website has instructed</p>
 <ul>
 <li><em>Note: “auth” is my API key token wrapped in the base64() function</em></li>
 </ul></li>
 <li><p>When we look at the response, we see the Status = 200 which is exactly what we want to see! This means the request has succeeded yay :smile:</p></li>
 </ul>
-<pre class="r"><code>source(&quot;login_creds.R&quot;)
+<pre class="r"><code>setwd(here(&quot;../&quot;))
+source(&quot;login_creds.R&quot;)
 
 res = GET(glue(&#39;https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-{season}/week/{n_week}/games.json&#39;), 
           add_headers(Authorization = paste(&quot;Basic&quot;, auth)))
 res </code></pre>
 <pre><code>## Response [https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-pre/week/1/games.json]
-##   Date: 2021-08-26 11:51
+##   Date: 2021-08-26 22:25
 ##   Status: 200
 ##   Content-Type: application/json
 ##   Size: 37.4 kB</code></pre>
-<p>However, our response is an object that is not very R friendly</p>
+<p>However, the response is an object that is not very R friendly so…</p>
 <ul>
-<li>First, we need to convert our response into a character and we’ll use <code>httr::content()</code> to do this</li>
-<li>Then, we need to convert the JSON object to an R object using <code>jsonlite::fromJSON()</code> (this function only accepts characters, which is why we used content() first)</li>
+<li>First, I need to convert the response into a character and I’ll use <code>httr::content()</code> to do this</li>
+<li>Then, I need to convert the JSON object to an R object using <code>jsonlite::fromJSON()</code> (this function only accepts characters, which is why I used content() first)</li>
 </ul>
 <pre class="r"><code>api_response &lt;- content(res, as=&quot;text&quot;)
 api_response &lt;- jsonlite::fromJSON(api_response, flatten=TRUE) # flatten=TRUE automatically flattens nested data into a single non-nested data frame
@@ -107,11 +141,13 @@ games_raw &lt;- api_response$games # selecting the data I want</code></pre>
 <div id="github-repo" class="section level3">
 <h3>Github Repo…</h3>
 <p><a href="https://github.com/MySportsFeeds/mysportsfeeds-r">MySportsFeed Github R</a></p>
-<p>Turns out, there’s already an entire Github repo that has a MySportsFeed R wrapper to make the process of getting the data from the API much easier
-- I actually used this method at first, but I wanted to learn how to get the data without a wrapper so that’s why I’ve included the code above and this is included but commented out
-- Install: devtools::install_github(“MySportsFeeds/mysportsfeeds-r”)
-- authenticate using api key
-- msf_get_results() to get a request for a specific feed and can specify parameters</p>
+<p>Turns out, there’s already an entire Github repo that has a MySportsFeed R wrapper to make the process of getting the data from the API much easier. It’s always good to have a look on github first, especially for popular APIs!</p>
+<ul>
+<li>I actually used this method at first, but I wanted to learn how to get the data without a wrapper, so that’s why I’ve included the code above and this is included but commented out</li>
+<li>Install: devtools::install_github(“MySportsFeeds/mysportsfeeds-r”)</li>
+<li>Authenticate using api key</li>
+<li>msf_get_results() to get a request for a specific feed and can specify parameters</li>
+</ul>
 <pre class="r"><code># authenticate_v2_x(auth2) # auth without base64()
 # 
 # weekly_games &lt;- msf_get_results(version=&#39;2.0&#39;,
@@ -162,7 +198,7 @@ games_clean</code></pre>
 <h1>Deciding which games to watch</h1>
 <ul>
 <li>I’m sure there’s a more efficient ways to do this, but I thought I’d keep it easy to follow by creating mini datasets that align with my initial criteria</li>
-<li>Importantly, I don’t want to see any of the data - I just want to see the match ups of the games I want to watch (so the only data I want in the end is the away and home team names)</li>
+<li>Importantly, I don’t want to see any data that could potentially ruin the games for me - I just want to see the match ups of the games I want to watch (so the only data I want in the end is the away and home team names)</li>
 </ul>
 <pre class="r"><code>ravens_chiefs &lt;- games_clean %&gt;%
   filter(away_team %in% c(&quot;BAL&quot;, &quot;KC&quot;) | home_team %in% c(&quot;BAL&quot;, &quot;KC&quot;)) %&gt;%
@@ -200,14 +236,13 @@ final_games </code></pre>
 ## 4 PIT       PHI      
 ## 5 LAC       LA       
 ## 6 WAS       NE</code></pre>
-</div>
-<div id="gmailr" class="section level1">
-<h1>gmailr</h1>
+<div id="gmailr" class="section level3">
+<h3>gmailr</h3>
 <ul>
 <li>Finally, I thought it would be cool to learn how to get these results emailed to myself… why not learn one more thing, right?</li>
 <li>Fortunately, I found the <code>gmailr</code> package</li>
-<li>So all I have to do is run the script and I’ll get an email with all the games I should watch</li>
-<li>To do this, I did create a new email account because I had to adjust the security settings to “Less secure app access” which I didn’t want to do with my primary email</li>
+<li>To do this, I decided to create a new email account because I had to adjust the security settings to “Less secure app access” which I didn’t want to do with my primary email</li>
+<li>So now all I have to do is run the script and I’ll get an email with all the games I should watch</li>
 </ul>
 <pre class="r"><code>games_table &lt;- final_games %&gt;%
   kable()
@@ -227,4 +262,5 @@ gm_send_message(my_html_msg)</code></pre>
 <li>And finally…here’s a screenshot of my email!! 🏈</li>
 </ul>
 <p><img src="images/email_results.png" /></p>
+</div>
 </div>

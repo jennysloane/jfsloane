@@ -9,37 +9,60 @@ image:
   focal_point: ""
 subtitle: 
 summary: In this blog, I share my experience using an API for the first time
-title: My First API - which NFL games should I watch?
+title: "My First API: Which NFL games should I watch?"
 ---
 <!-- have to knit first if .Rmd --> 
+<style type="text/css">
+
+body {
+  font-size: 14pt;
+}
+
+h1 { /* Header 1 */
+  font-size: 34px;
+  color: DarkBlue;
+  font-weight: bold;
+}
+
+h2 { /* Header 2 */
+    font-size: 30px;
+    color: DarkBlue;
+    font-weight: bold;
+}
+
+h3 { /* Header 2 */
+  font-size: 26px;
+  color: DarkBlue;
+  font-weight: bold;
+}
+
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
-
-library(here)
-setwd(here("content/blog/nfl"))
 ```
 
-
+<p>
 Growing up in Baltimore MD, I've been a **huge** Ravens fan for as long as I can remember. I've always loved American football and I try to watch as many games as I can... regardless of where I'm living in the world. The problem is there are just too many games to watch in any given week. Therefore, my goal for this project was to create a program that tells me the "top" games of the week, depending on a criteria I've created. So what's my criteria?
 
-1) **Favorite teams**: Obviously Baltimore Ravens!! And Kansas City Chiefs (for my partner)
+1) **Favorite teams**: Obviously <span style="color: MediumSlateBlue;">Baltimore Ravens!!</span> And <span style="color: Red;">Kansas City Chiefs</span> (for my partner)
 2) **Close games**: Final score within 5 points & combine total score > 35
 3) **High scoring games**: Total score >= 40
-4) **Multiple lead changes**: At least 2 lead changes from quarter to quarter
+4) **Multiple lead changes**: At least 2 lead changes from quarter to quarter </p>
 
 ### Helpful resources on APIs
-- While I won't go into too much detail about APIs, here are some resources I found particularly useful
+- I won't go into too much detail about APIs, but here are some resources I found particularly useful
 - [R API tutorial](https://www.dataquest.io/blog/r-api-tutorial/)
 - [Using Web APIs from R](https://www.rstudio.com/resources/rstudioconf-2017/using-web-apis-from-r/)
 
 ### Notes before getting started 
 - I'll be using data from [https://www.mysportsfeeds.com/](https://www.mysportsfeeds.com/)
-- You need authorization to access this API, so only I can successfully run the code because I have the necessary credentials 
+- You need authorization to access this API, so only I can successfully run the code because I have the necessary credentials saved in a safe location on my computer
 - 2 incredibly useful packages: `httr` and `jsonlite`
 
 ### Load libraries
 ```{r}
+library(here)
 library(tidyverse) 
 library(janitor)
 library(httr)
@@ -53,6 +76,7 @@ library(mysportsfeedsR)
 ```
 
 ### Set parameters
+- In this blog, I'll go through an example using 2021 pre-season week 1 data
 ```{r}
 # for request
 season = "pre" # "pre" or "regular"
@@ -69,18 +93,20 @@ high_score_points = 40
 - This was by far the most challenging part! It's only a few lines of code, but it took me hours to figure out the formatting of everything
 
 - The API documentation from the website I'm using specifically says:
-  1. "Issue a HTTPS GET request to: https://api.mysportsfeeds.com/v2.1/pull/nfl/{season}/week/{week}/games.{format}"
+  1. "Issue a HTTPS GET request to: `https://api.mysportsfeeds.com/v2.1/pull/nfl/{season}/week/{week}/games.{format}`"
   2. "Authorization: Basic {encrypted_api_key_credentials}"
       - {encrypted_api_key_credentials} = api_key_token + ":" + password
       - and then encoding it with base64 encoding  
-      
-- `httr::GET()` to send a request to the API
-- I'm using the `glue()` function to paste together my URL string that includes the parameters I've set above
-- I'm also using the add_header argument to add the Authorization in the specific way the website has instructed
+   
+- The first couple of lines of code below are accessing and loading in my credentials and authorization keys      
+- Then I use `httr::GET()` to send a request to the API
+- I use the `glue()` function to paste together my URL string that includes the parameters I've set above
+- I also use the add_header argument to add the Authorization in the specific way the website has instructed
   - *Note: "auth" is my API key token wrapped in the base64() function*
   
 - When we look at the response, we see the Status = 200 which is exactly what we want to see! This means the request has succeeded yay :smile:
 ```{r}
+setwd(here("../"))
 source("login_creds.R")
 
 res = GET(glue('https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-{season}/week/{n_week}/games.json'), 
@@ -88,10 +114,10 @@ res = GET(glue('https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-{season}/week/{
 res 
 ```
 
-However, our response is an object that is not very R friendly
+However, the response is an object that is not very R friendly so...
 
-  - First, we need to convert our response into a character and we'll use `httr::content()` to do this 
-  - Then, we need to convert the JSON object to an R object using `jsonlite::fromJSON()` (this function only accepts characters, which is why we used content() first)
+  - First, I need to convert the response into a character and I'll use `httr::content()` to do this 
+  - Then, I need to convert the JSON object to an R object using `jsonlite::fromJSON()` (this function only accepts characters, which is why I used content() first)
 ```{r}
 api_response <- content(res, as="text")
 api_response <- jsonlite::fromJSON(api_response, flatten=TRUE) # flatten=TRUE automatically flattens nested data into a single non-nested data frame
@@ -103,10 +129,11 @@ games_raw <- api_response$games # selecting the data I want
 ### Github Repo...
 [MySportsFeed Github R](https://github.com/MySportsFeeds/mysportsfeeds-r)
 
-Turns out, there's already an entire Github repo that has a MySportsFeed R wrapper to make the process of getting the data from the API much easier
-  - I actually used this method at first, but I wanted to learn how to get the data without a wrapper so that's why I've included the code above and this is included but commented out
+Turns out, there's already an entire Github repo that has a MySportsFeed R wrapper to make the process of getting the data from the API much easier. It's always good to have a look on github first, especially for popular APIs!
+
+  - I actually used this method at first, but I wanted to learn how to get the data without a wrapper, so that's why I've included the code above and this is included but commented out
   - Install: devtools::install_github("MySportsFeeds/mysportsfeeds-r")
-  - authenticate using api key
+  - Authenticate using api key
   - msf_get_results() to get a request for a specific feed and can specify parameters
 
 ```{r}
@@ -143,7 +170,7 @@ games_clean
 
 # Deciding which games to watch
 - I'm sure there's a more efficient ways to do this, but I thought I'd keep it easy to follow by creating mini datasets that align with my initial criteria 
-- Importantly, I don't want to see any of the data - I just want to see the match ups of the games I want to watch (so the only data I want in the end is the away and home team names)
+- Importantly, I don't want to see any data that could potentially ruin the games for me - I just want to see the match ups of the games I want to watch (so the only data I want in the end is the away and home team names)
 
 ```{r}
 ravens_chiefs <- games_clean %>%
@@ -179,8 +206,9 @@ final_games
 
 - Finally, I thought it would be cool to learn how to get these results emailed to myself... why not learn one more thing, right?
 - Fortunately, I found the `gmailr` package
-- So all I have to do is run the script and I'll get an email with all the games I should watch 
-- To do this, I did create a new email account because I had to adjust the security settings to "Less secure app access" which I didn't want to do with my primary email
+- To do this, I decided to create a new email account because I had to adjust the security settings to "Less secure app access" which I didn't want to do with my primary email
+- So now all I have to do is run the script and I'll get an email with all the games I should watch 
+
 ```{r eval = FALSE}
 games_table <- final_games %>%
   kable()
