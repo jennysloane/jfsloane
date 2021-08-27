@@ -104,7 +104,7 @@ high_score_points = 40
 - I also use the add_header argument to add the Authorization in the specific way the website has instructed
   - *Note: "auth" is my API key token wrapped in the base64() function*
   
-- When we look at the response, we see the Status = 200 which is exactly what we want to see! This means the request has succeeded yay :smile:
+- When we look at the response, we see the Status = 200 which is exactly what we want to see (after many failed attempts)! This means the request has succeeded yay :smile:
 ```{r}
 setwd(here("../"))
 source("login_creds.R")
@@ -129,12 +129,12 @@ games_raw <- api_response$games # selecting the data I want
 ### Github Repo...
 [MySportsFeed Github R](https://github.com/MySportsFeeds/mysportsfeeds-r)
 
-Turns out, there's already an entire Github repo that has a MySportsFeed R wrapper to make the process of getting the data from the API much easier. It's always good to have a look on github first, especially for popular APIs!
+Turns out there's already an entire Github repo that has a MySportsFeed R wrapper to make the process of getting the data from the API much easier. It's always good to have a look on github first, especially for popular APIs!
 
   - I actually used this method at first, but I wanted to learn how to get the data without a wrapper, so that's why I've included the code above and this is included but commented out
-  - Install: devtools::install_github("MySportsFeeds/mysportsfeeds-r")
+  - `Install: devtools::install_github("MySportsFeeds/mysportsfeeds-r")`
   - Authenticate using api key
-  - msf_get_results() to get a request for a specific feed and can specify parameters
+  - `msf_get_results()` to get a request for a specific feed and can specify parameters
 
 ```{r}
 # authenticate_v2_x(auth2) # auth without base64()
