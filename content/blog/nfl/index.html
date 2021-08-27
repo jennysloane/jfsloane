@@ -115,7 +115,7 @@ high_score_points = 40</code></pre>
 <ul>
 <li><em>Note: “auth” is my API key token wrapped in the base64() function</em></li>
 </ul></li>
-<li><p>When we look at the response, we see the Status = 200 which is exactly what we want to see! This means the request has succeeded yay :smile:</p></li>
+<li><p>When we look at the response, we see the Status = 200 which is exactly what we want to see (after many failed attempts)! This means the request has succeeded yay :smile:</p></li>
 </ul>
 <pre class="r"><code>setwd(here(&quot;../&quot;))
 source(&quot;login_creds.R&quot;)
@@ -124,7 +124,7 @@ res = GET(glue(&#39;https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-{season}/we
           add_headers(Authorization = paste(&quot;Basic&quot;, auth)))
 res </code></pre>
 <pre><code>## Response [https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-pre/week/1/games.json]
-##   Date: 2021-08-27 03:58
+##   Date: 2021-08-27 04:05
 ##   Status: 200
 ##   Content-Type: application/json
 ##   Size: 37.4 kB</code></pre>
@@ -141,12 +141,12 @@ games_raw &lt;- api_response$games # selecting the data I want</code></pre>
 <div id="github-repo" class="section level3">
 <h3>Github Repo…</h3>
 <p><a href="https://github.com/MySportsFeeds/mysportsfeeds-r">MySportsFeed Github R</a></p>
-<p>Turns out, there’s already an entire Github repo that has a MySportsFeed R wrapper to make the process of getting the data from the API much easier. It’s always good to have a look on github first, especially for popular APIs!</p>
+<p>Turns out there’s already an entire Github repo that has a MySportsFeed R wrapper to make the process of getting the data from the API much easier. It’s always good to have a look on github first, especially for popular APIs!</p>
 <ul>
 <li>I actually used this method at first, but I wanted to learn how to get the data without a wrapper, so that’s why I’ve included the code above and this is included but commented out</li>
-<li>Install: devtools::install_github(“MySportsFeeds/mysportsfeeds-r”)</li>
+<li><code>Install: devtools::install_github("MySportsFeeds/mysportsfeeds-r")</code></li>
 <li>Authenticate using api key</li>
-<li>msf_get_results() to get a request for a specific feed and can specify parameters</li>
+<li><code>msf_get_results()</code> to get a request for a specific feed and can specify parameters</li>
 </ul>
 <pre class="r"><code># authenticate_v2_x(auth2) # auth without base64()
 # 
