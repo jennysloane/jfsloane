@@ -169,7 +169,7 @@ games_clean
 ```
 
 # Deciding which games to watch
-- I'm sure there's a more efficient ways to do this, but I thought I'd keep it easy to follow by creating mini datasets that align with my initial criteria 
+- I'm sure there are more efficient ways to do this, but I thought I'd keep it easy to follow by creating mini datasets that align with my initial criteria 
 - Importantly, I don't want to see any data that could potentially ruin the games for me - I just want to see the match ups of the games I want to watch (so the only data I want in the end is the away and home team names)
 
 ```{r}

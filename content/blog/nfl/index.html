@@ -124,7 +124,7 @@ res = GET(glue(&#39;https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-{season}/we
           add_headers(Authorization = paste(&quot;Basic&quot;, auth)))
 res </code></pre>
 <pre><code>## Response [https://api.mysportsfeeds.com/v2.0/pull/nfl/2021-pre/week/1/games.json]
-##   Date: 2021-08-26 22:25
+##   Date: 2021-08-27 03:58
 ##   Status: 200
 ##   Content-Type: application/json
 ##   Size: 37.4 kB</code></pre>
@@ -197,7 +197,7 @@ games_clean</code></pre>
 <div id="deciding-which-games-to-watch" class="section level1">
 <h1>Deciding which games to watch</h1>
 <ul>
-<li>I’m sure there’s a more efficient ways to do this, but I thought I’d keep it easy to follow by creating mini datasets that align with my initial criteria</li>
+<li>I’m sure there are more efficient ways to do this, but I thought I’d keep it easy to follow by creating mini datasets that align with my initial criteria</li>
 <li>Importantly, I don’t want to see any data that could potentially ruin the games for me - I just want to see the match ups of the games I want to watch (so the only data I want in the end is the away and home team names)</li>
 </ul>
 <pre class="r"><code>ravens_chiefs &lt;- games_clean %&gt;%
