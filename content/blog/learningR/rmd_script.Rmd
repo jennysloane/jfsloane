@@ -1,0 +1,30 @@
+---
+title: "My Rmarkdown Script"
+output: html_document
+author: Jenny Sloane
+---
+
+# Header 1
+
+- you 
+- can
+- add
+- lists
+
+## Header 2
+
+**You can write in bold**
+
+*You can also write in italics*
+
+## Header 3
+
+You can add math equations:
+$a^{2} + b^{2} + = c^{2}$
+
+And even ***adorable*** images: <br>
+![](images/tuck.png)
+
+
+
+

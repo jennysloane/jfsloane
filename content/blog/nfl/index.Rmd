@@ -10,6 +10,10 @@ image:
 subtitle: 
 summary: In this blog, I share my experience using an API for the first time
 title: "My First API: Which NFL games should I watch?"
+toc: true
+output:
+  blogdown::html_page:
+    toc: true
 ---
 <!-- have to knit first if .Rmd --> 
 <style type="text/css">
@@ -19,22 +23,11 @@ body {
 }
 
 h1 { /* Header 1 */
-  font-size: 34px;
-  color: DarkBlue;
-  font-weight: bold;
-}
-
-h2 { /* Header 2 */
-    font-size: 30px;
-    color: DarkBlue;
-    font-weight: bold;
-}
-
-h3 { /* Header 2 */
   font-size: 26px;
   color: DarkBlue;
   font-weight: bold;
 }
+
 
 </style>
 
@@ -50,17 +43,17 @@ Growing up in Baltimore MD, I've been a **huge** Ravens fan for as long as I can
 3) **High scoring games**: Total score >= 40
 4) **Multiple lead changes**: At least 2 lead changes from quarter to quarter </p>
 
-### Helpful resources on APIs
+# Helpful resources on APIs
 - I won't go into too much detail about APIs, but here are some resources I found particularly useful
 - [R API tutorial](https://www.dataquest.io/blog/r-api-tutorial/)
 - [Using Web APIs from R](https://www.rstudio.com/resources/rstudioconf-2017/using-web-apis-from-r/)
 
-### Notes before getting started 
+# Notes before getting started 
 - I'll be using data from [https://www.mysportsfeeds.com/](https://www.mysportsfeeds.com/)
 - You need authorization to access this API, so only I can successfully run the code because I have the necessary credentials saved in a safe location on my computer
 - 2 incredibly useful packages: `httr` and `jsonlite`
 
-### Load libraries
+# Load libraries
 ```{r}
 library(here)
 library(tidyverse) 
@@ -75,7 +68,7 @@ library(glue)
 library(mysportsfeedsR)
 ```
 
-### Set parameters
+# Set parameters
 - In this blog, I'll go through an example using 2021 pre-season week 1 data
 ```{r}
 # for request
@@ -89,7 +82,7 @@ high_score_points = 40
 ```
 
 
-### GET request 
+# GET request 
 - This was by far the most challenging part! It's only a few lines of code, but it took me hours to figure out the formatting of everything
 
 - The API documentation from the website I'm using specifically says:
@@ -126,7 +119,7 @@ games_raw <- api_response$games # selecting the data I want
 ```
 
 
-### Github Repo...
+# Github Repo...
 [MySportsFeed Github R](https://github.com/MySportsFeeds/mysportsfeeds-r)
 
 Turns out there's already an entire Github repo that has a MySportsFeed R wrapper to make the process of getting the data from the API much easier. It's always good to have a look on github first, especially for popular APIs!
@@ -149,7 +142,7 @@ Turns out there's already an entire Github repo that has a MySportsFeed R wrappe
 
 ```
 
-### Clean the data
+# Clean the data
   - Now I have the "raw" data in R, but it definitely needs some cleaning
   - Check out the clean data below!
 ```{r} 
@@ -202,7 +195,7 @@ final_games <- rbind(ravens_chiefs, close_games, high_games, lead_change) %>%
 final_games 
 ```
 
-### gmailr
+# gmailr
 
 - Finally, I thought it would be cool to learn how to get these results emailed to myself... why not learn one more thing, right?
 - Fortunately, I found the `gmailr` package

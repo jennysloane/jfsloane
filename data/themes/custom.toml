@@ -1,0 +1,22 @@
+# custom theme
+name = "test"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#014f86" # dark blue background of the top bar 
+
+# Menu
+menu_primary = "#014f86" # dark blue background of the top bar 
+menu_text = "#dfe7fd" # pale blue 
+menu_text_active = "#f72585" # pink
+menu_title = "#f72585" # pink
+
+# Home sections - page background color
+home_section_odd = "#dfe7fd" # pale blue 
+home_section_even = "#dfe7fd" # pale blue 
+
+[dark]
+  link = "#DBF4A7"
+  link_hover = "#081c15"

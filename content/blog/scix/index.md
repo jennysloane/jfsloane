@@ -13,7 +13,26 @@ subtitle:
 summary: This is my blog on my experience as a PhD mentor for UNSW's SciX program
 tags: []
 title: SciX
+toc: false
+output:
+  rmarkdown::html_page:
+    toc: false
 ---
+<!-- have to knit first if .Rmd --> 
+<style type="text/css">
+
+body {
+  font-size: 15pt;
+}
+
+h1 { /* Header 1 */
+  font-size: 26px;
+  color: DarkBlue;
+  font-weight: bold;
+}
+
+
+</style>
 
 From January 20-24, close to 100 bright, motivated, and eager high school students from across the country came to University of New South Wales to participate in SciX. The SciX program was designed for year 12 students who are enrolled in the Science Extension program (hence the name SciX) to come to campus for an intensive week of attending workshops and research labs. Students applied to over a dozen projects they were interested in on the SciX website. There were many different projects ranging from modeling infectious disease to research on climate change. The full list of projects can be found on the link above. 
 
