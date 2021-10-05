@@ -41,13 +41,13 @@ h1 { /* Header 2 */
 
 h2 { /* Header 1 */
   font-size: 24px;
-  color: #8AAA79;
+  color: #9d3ae8;
   font-weight: bold;
 }
 
 h3 { /* Header 2 */
   font-size: 24px;
-  color: #8AAA79;
+  color: #9d3ae8;
   font-weight: bold;
 }
 
@@ -89,7 +89,7 @@ There are 4 panes you will quickly become very familiar with within RStudio
       - **Packages** that you already have or would like to install
       - **Help** documentation. This is a really great built in feature to help you understand specific functions. To test this out type `?mean` into the console and you will see the documentation for the mean() function. This is incredibly useful to see what the function looks like, including what arguments it takes, and often there will be examples at the bottom of the documentation with code for you to test out the function.
 
-<p1> Recommended resource: R-Ladies Sydney RYouWithMe [BasicBasics Tutorial](https://rladiessydney.org/courses/ryouwithme/01-basicbasics-1/) </p1>
+<p1> Recommended resource: [R-Ladies Sydney RYouWithMe BasicBasics Tutorial](https://rladiessydney.org/courses/ryouwithme/01-basicbasics-1/) </p1>
 
 <p1> Tip: Want to work in dark mode or change your color theme? Navigate to: Tools &rarr; Global Options &rarr; Appearance and test out different color themes (I use "Tomorrow Night Bright") </p1>
 
@@ -190,10 +190,9 @@ The first chunk you see in the template is a little bit different. While this ch
 ## Markdown
 All text outside of the YAML and R chunks is written with `Markdown` syntax. You can easily style your text with bold and italics. You can add headers, lists, equations, links, images, and so much more. Below you can see what code looks like in R Markdown compared to what it looks like when it's knitted to a pdf. 
 
-<p1> Recommended resource: A great YouTube playlist by Danielle Navarro on [R Markdown](https://www.youtube.com/playlist?list=PLRPB0ZzEYegM86awo590bP1MJjQbjdR9E) </p1>
+<p1> Recommended resource: [A great YouTube playlist by Danielle Navarro on R Markdown](https://www.youtube.com/playlist?list=PLRPB0ZzEYegM86awo590bP1MJjQbjdR9E) </p1>
 
-<p1> 
-[https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/) is a great website and resource to learn more about R Markdown. </p1>
+<p1> [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/) is a great website and resource to learn more about R Markdown. </p1>
 
 # Tidyverse!!
 I first learned R in base R, but once I learned about tidyverse there was no going back. There's so much I can say about tidyverse, but I'll only cover some of the basics and provide resources along the way. 
@@ -283,8 +282,83 @@ And finally, we see our output: the mean body mass for females Adelie penguins o
 
 <p1> Of course, it takes time and practice to learn the different functions within tidyverse. But, these are some of the `dplyr` functions I use all the time (i.e. `select()`, `filter()`, `group_by()`, `summarise()`, and `drop_na()`). </p1>
 
-<p1> Recommended resource: R-Ladies Sydney RYouWithMe [CleanItUp Tutorial](https://rladiessydney.org/courses/ryouwithme/02-cleanitup-0/) </p1>
+<p1> Recommended resource: [R-Ladies Sydney RYouWithMe "CleanItUp" Tutorial](https://rladiessydney.org/courses/ryouwithme/02-cleanitup-0/) </p1>
 
-<p1> Recommended resource: Another fabulous YouTube playlist by Danielle Navarro [say hello to your data](https://www.youtube.com/playlist?list=PLRPB0ZzEYegPYKRLwJRh4AbWWSiIlzmC7) </p1>
+<p1> Recommended resource: [Another fabulous YouTube playlist by Danielle Navarro "say hello to your data"](https://www.youtube.com/playlist?list=PLRPB0ZzEYegPYKRLwJRh4AbWWSiIlzmC7) </p1>
 
-![](images/art_rollercoaster2.png)
+# My Workflow
+In this final section, I thought I'd share some tips and an example of my workflow in R. There are many free datasets you can explore within R (e.g. mtcars, iris, penguins in the palmerpenguin package). However, for this blog, I've downloaded a dataset from [Kaggle](https://www.kaggle.com/arjunprasadsarkhel/2021-olympics-in-tokyo) on the medal standings from the Tokyo Olympics.
+
+<center>
+<strong>Research Question: "Which countries (top 5) won the most medals?"</strong>
+</center>
+<br>
+
+Usually when I use R, I have a folder within the root of my project titled "data" and of course this is where I keep the actual data files. This just helps me keep my project more organized and I always know exactly where my data is. So, I've done the same thing here - I created a data folder and saved the `medals.csv` file there. Note, that this is now one folder deep into our project. What this means is that we have to let R know to look inside the "data" folder in order to find our .csv file because it's not located at the root of our project. But don't worry, this is easy to do, especially if you know about the `here` package.
+
+Below I'll show you my typical workflow using the medals dataset. 
+
+## Load in libraries
+- My first chunk of code is always dedicated to loading in all of the libraries I need for my entire script 
+- I make sure the chunk options include `message=FALSE` and `warning=FALSE` so when I knit the file I don't see all of the messages and warning from loading in the respective libraries
+
+```{r, include=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(janitor) 
+library(here)
+library(ggeasy)
+```
+
+```{r, include=FALSE}
+# detach("package:here", unload=TRUE)
+# set_here("C:/Users/jfslo/OneDrive/Main Documents/School/github/jfsloane/content/blog/intro_to_R")
+# library(here)
+```
+
+
+## Read in data 
+- `read_csv()` is very similar to `read.csv()`, except it will automatically read your data in as a tibble (a "tidy" dataframe). For this reason, I exclusively use `read_csv()`
+- I use the `here()` to tell R that I want it to go within the "data" folder I just created in order to find the "cereal.csv" file
+- Let's take a quick look at our "medals_raw" data
+
+<p1> Recommended resource:[How to use the `here` package by Jenny Richmond] (http://jenrichmond.rbind.io/post/how-to-use-the-here-package/) </p1>
+```{r, warning=FALSE, message=FALSE}
+medals_raw <- read_csv(here("data", "medals.csv"))
+# cereal <- read_csv("data/cereal.csv") # this will also work, if you wish to specify the path directly 
+
+head(medals_raw) # look at only the top 6 rows
+```
+
+## Clean data 
+1. When looking at the data, the first thing I notice is the variable names could be "cleaner". 
+    - We always want to try to avoid white space, so we'll want to change our variable "Rank by Total". Programmers have their own style of coding in order to avoid white space. For example, there's "snake_case" (Rank_by_Total) or "camel case" (rankByTotal) or "kebab case" (Rank-by-Total). 
+    - My preference is snake case and I also make sure my variables are all lowercase (mainly because like most programmers I'm lazy and it's much easier to type lower case letters than capital letters)
+    - Fortunately, `janitor::clean_names()` does all of this for me in just one line of code!
+    - So, here I'll use the `clean_names()` function to remove white space and transform everything to lower case
+2. Select only the columns/variables I need in order to answer my research question. This will make your life so much easier, especially if your dataset has dozens or even hundreds of variables 
+3. Arrange the total column in descending order
+4. Select only the top 5 rows... I've actually never heard of `top_n()` before, but I just did a quick Google search and found it!
+```{r, warning=FALSE, message=FALSE}
+medals_top5 <- medals_raw %>% 
+  clean_names() %>%
+  select(team_noc, total) %>%
+  arrange(desc(total)) %>%
+  top_n(5)
+  
+medals_top5
+```
+
+## Visualise data
+Finally, let's create a basic visualisation using ggplot!
+```{r}
+ggplot(medals_top5, aes(x = reorder(team_noc, total, sum), y = total, fill=team_noc)) + # I've reordered the columns based on the sum of the total variable 
+  geom_col() + # flips the cartesian coordinates to make it easier to read the country names
+  coord_flip() + 
+  labs(x = "Country", y = "Total Medals") + # you can also add a "title" here if you'd like
+  easy_remove_legend() + # one of my favorite functions from ggeasy to remove the legend
+  easy_text_size(15) # and another one of my favorite functions from ggeasy to change the text size
+
+```
+
+
+<!-- ![](images/art_rollercoaster2.png) -->
