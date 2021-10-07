@@ -83,7 +83,7 @@ There are 4 panes you will quickly become very familiar with within RStudio
     - To test it out, you can go File &rarr; New File &rarr; R Script 
 2. Bottom Left: This is the **Console** where you can type code that you want to run one time and don't want to save it to a script. If you run a line of code in a script, depending on your settings, you may see the output in your console
 3. Top Right: There are quite a few tabs here, but the most important tab for beginners is the **Environment** tab where you can see all of your saved variables and objects
-4. Bottom Right: There are also several tabs here and I'll go into more detail about some of them later, but here you can see:
+4. Bottom Right: There are also several tabs here, but here you can see:
       - **Files** that are located within your working directory
       - Your beautiful **plots** and visualizations
       - **Packages** that you already have or would like to install
@@ -93,7 +93,7 @@ There are 4 panes you will quickly become very familiar with within RStudio
 
 <p1> Tip: Want to work in dark mode or change your color theme? Navigate to: Tools &rarr; Global Options &rarr; Appearance and test out different color themes (I use "Tomorrow Night Bright") </p1>
 
-# Working Directory & R Projects
+# Working Directory
 
 Before getting started with some coding, it's important to understand what a working directory is. 
 
@@ -103,6 +103,8 @@ Before getting started with some coding, it's important to understand what a wor
   - Option 1 (not recommended): Session &rarr; Set Working Directory &rarr; Choose Directory and navigate to find the correct folder 
   - Option 2 (also not recommended): `setwd()` to manually enter the path you want
   - Option 3 (highly recommended!): Create an **R Project** that will automatically set your wd 
+  
+# R Projects
 - **What is an R Project?** An R project is just a way to keep all of your files associated with any given project together, organized, and easily accessible. If you wish to test out how to set up an R Project, following along with the next few steps. Take a look in the top right hand corner of RStudio and you will see a blue R cube. Assuming you haven't already created a project, it will say "Project: (None)". To create a new project, click on that and select New Project. You will see the following options:
 
 ![](images/project.png) 
@@ -118,7 +120,7 @@ To start, click File &rarr; New File &rarr; R Script. Let's first save our scrip
 
 <p1> One important note here: it's best practice to avoid using spaces when naming scripts or folders. If you use spaces, you will probably eventually run into an error message, so best to avoid white spaces altogether. </p1>
 
-I recommend saving this in the same location as your R Project so it's all in the same place and easy to find. If you click on the Files tab, you should see your script is now there! For me, I now have a file called `r_script.R` - notice it has automatically added the extension .R as it's an R Script. You can also see it says "R Script" in the bottom right corner of your Source Editor. 
+I recommend saving this in the same location as your R Project so it's all in the same place and easy to find. If you click on the Files tab, you should see your script is now there! For me, I now have a file called `r_script.R` - notice it has automatically added the extension .R as it's an R Script. You can also see it says `R Script` in the bottom right corner of your Source Editor. 
 
 Great, let's start coding!
 
@@ -135,8 +137,10 @@ Okay a few things to go over here:
 
   - Anything written after a # is "commented out". This means R won't read or evaluate anything following a #. This is perfect for leaving comments or notes to yourself like I have done above
   - To run your entire script, click Source and then Source with echo (echo will print out your code along with the output) 
-  - You should see that the first line of code printed "My first script!!" and the second line of code printed the output "60", but the last line of code didn't print any output. This is because the last line we are defining a variable "x". So, although nothing is printed in our console output, check out your Environment - you should see you now have your variable "x" saved there and it's value is 6! 
-  - Because you have x saved in your environment, now if you type x in your console, you will see the output
+    - You should see that the first line of code printed "My first script!!" 
+    - The second line of code printed the output "60"
+    - But, the last line of code didn't print any output. This is because the last line we are defining a variable "x". So, although nothing is printed in our console output, check out your Environment - you should see you now have your variable "x" saved there and it's value is 6! 
+    - Because you have x saved in your environment, now if you type x in your console, you will see the output
   - You can also run your script line by line. One way to do this is put your cursor on the line you want to run and click the green Run button. Or, put your cursor on the line you want to run and press ctr (or cmd) + enter. You'll see your cursor moves down a line automatically after you run one line. So if you start at the top of your script and press and hold down ctrl and press enter 3 times, all 3 lines of code will run.
   
 # R Markdown 
@@ -164,7 +168,6 @@ When we created our .R script, we had a blank script, but now we see that we are
 
 ## YAML Section
 In our default YAML, we already have a `title` and `output` specified. There are other arguments you can add here, such as `author` or `date`. Let's add the author argument to test it out. <br>
-<p1> Note: It's important to pay attention to spacing here. For example, if I had `author:Jenny Sloane` without the space I would have issues with knitting my document. </p1>
 
 Try knitting your file again. Now you should see your name appear under the title.
 
@@ -176,20 +179,23 @@ author: Jenny Sloane
 ---
 ```
 
+<p1> Note: It's important to pay attention to spacing here. For example, if I had `author:Jenny Sloane` without the space I would have issues with knitting my document. </p1>
 
 ## R Chunks
-We already have a few chunks created for us in our template. In any code chunk, you'll see a few buttons in the top right corner: a options/gear button and 2 arrows. The gear button allows you to modify chunk options (I don't think I've ever used this). Next to the gear button, there's an arrow pointing down, which if you click it will run all of the chunks above the current chunk. Finally, the green arrow pointing to the right will run all of the code within that current chunk. Of course you can also run your code line by line the same way as we did in the .R scripts (I usually run my code line by line by pressing ctrl + enter). 
+We already have a few chunks created for us in our template. In any code chunk, you'll see a few buttons in the top right corner: an options/gear button and 2 arrows. The gear button allows you to modify chunk options (I don't think I've ever used this). Next to the gear button, there's an arrow pointing down, which if you click it will run all of the chunks *above* the current chunk. Finally, the green arrow pointing to the right will run all of the code within that current chunk. Of course you can also run your code line by line the same way as we did in the .R scripts (I usually navigate to the chunk I want to work on, press the arrow pointing down, and then run my code line by line by pressing ctrl + enter). 
 
 R chunks have certain options you can set. For example, if you want the actual code to appear in your knitted document, you can set `echo=TRUE` and if you only want the output to appear and no code you can set `echo=FALSE`. Other chunk options that I often use are: `include`, `warning`, `message`, and `eval`. 
 
-<p1> :books: Recommended resource: To find out more about R chunk options, check out the R Markdown "Cheat Sheet" by going to Help &rarr; Cheat Sheets &rarr; R Markdown Cheat Sheet. There are so many existing R cheat sheets, which you can find
-[here](https://www.rstudio.com/resources/cheatsheets/). </p1>
-
 The first chunk you see in the template is a little bit different. While this chunk is not necessary and you can remove it if you'd like, this is where you can set global chunk options. For example, you can see echo is set to TRUE here, so this means all of the code will appear in your knitted document. You can override the global chunk settings by directly adjusting the options in any specific chunk. 
 
-<p1> Small aside: you may have noticed next to the `r` in the first chunk it says "setup". This is where you can set a "name" for you chunk, so it makes sense that this chunk is called setup. This is just another way to help keep your code and report organized. </p1>
 
-<p1> Fun fact: in the top right hand corner of the Source Editor there is a button that is a stack of line. I've heard this referred to as the "pancake button", which I love! If you click on the pancake button, you'll see an outline for your entire document! To use the outline feature, you simply have to include "headers" within your document. You can include headers by using # (see image below for examples). </p1>
+As a small aside, you may have noticed next to the `r` in the first chunk it says "setup". This is where you can set a "name" for you chunk, so it makes sense that this chunk is called setup. This is just another way to help keep your code and report organized. 
+
+<p1> Fun (and helpful) fact: in the top right hand corner of the Source Editor there is a button that is a stack of line. I've heard this referred to as the "pancake button", which I love! If you click on the pancake button, you'll see an outline for your entire document! To use the outline feature, you simply have to include "headers" within your document. You can include headers by using # (see image below for examples). </p1>
+
+<p1> :books: Recommended resource: Check out the R Markdown "Cheat Sheet" by going to Help &rarr; Cheat Sheets &rarr; R Markdown Cheat Sheet.
+
+<p1> :books: Recommended resource: [Have a look at other existing cheat sheets here](https://www.rstudio.com/resources/cheatsheets/). </p1>
 
 ## Markdown
 All text outside of the YAML and R chunks is written with `Markdown` syntax. You can easily style your text with bold and italics. You can add headers, lists, equations, links, images, and so much more. Below you can see what code looks like in R Markdown compared to what it looks like when it's knitted to a pdf. 
@@ -230,7 +236,7 @@ It's not enough to just install the package. Every time you start a new R sessio
 
 So, you can think about it as having an entire library of all the packages you've ever installed. But, in each script and session you need to specify which libraries (aka packages) you want to load in. 
 
-<p1> Note: when you install packages you need to use "" around the package name, but you don't need to when you call in the library. </p1>
+<p1> Note: when you install packages you need to use " " around the package name, but you don't need to when you call in the library. </p1>
 
 ## The Pipe `%>%`
 
@@ -266,7 +272,12 @@ levels(penguins$species)
 
 From quickly looking at the levels of a couple of variables, we can see there are 3 islands (Biscoe, Dream, Torgersen) and 3 species (Adelie, Chinstrap, Gentoo). 
 
-I like the idea of a "Dream" island, so the question I'll ask here is: **What is the mean body mass for female and male Adelie penguins on Dream island?**
+I like the idea of a "Dream" island, so the question I'll ask here is: 
+
+<center>
+<strong>What is the mean body mass for female and male Adelie penguins on Dream island?"</strong>
+</center>
+<br>
 
 Here's the code to answer my question and below I'll go through the pipes line by line:
 ```{r, include=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
@@ -341,35 +352,38 @@ head(medals_raw) # look at only the top 6 rows
 
 ## Clean our data 
 ```{r, warning=FALSE, message=FALSE}
-medals_top5 <- medals_raw %>% 
-  clean_names() %>%
-  select(team_noc, total) %>%
-  arrange(desc(total)) %>%
-  top_n(5)
-  
-medals_top5
+medals_top5 <- medals_raw %>% # create a new variable with our results
+  clean_names() %>% # step 1
+  select(team_noc, total) %>% # step 2
+  arrange(desc(total)) %>% # step 3
+  top_n(5) # step 4
 ```
 
-1. When looking at the data, the first thing I notice is the variable names could be "cleaner". 
+- Step 1: When looking at the data, the first thing I notice is the variable names could be "cleaner". 
     - We always want to try to avoid white space, so we'll want to change our variable "Rank by Total". Programmers have their own style of coding in order to avoid white space. For example, there's "snake_case" (Rank_by_Total) or "camel case" (rankByTotal) or "kebab case" (Rank-by-Total). 
     - My preference is snake case and I also make sure my variables are all lowercase (mainly because, like most programmers, I'm lazy and it's much easier to type lower case letters than capital letters)
     - Fortunately, `janitor::clean_names()` does all of this for me in just one line of code!
     - So, here I'll use the `clean_names()` function to remove white space and transform everything to lower case
-2. Select only the columns/variables I need in order to answer my research question. This will make your life so much easier, especially if your dataset has dozens or even hundreds of variables 
-3. Arrange the total column in descending order
-4. Select only the top 5 rows... I've actually never heard of `top_n()` before, but I just did a quick Google search and found it!
+- Step 2: Select only the columns/variables I need in order to answer my research question. This will make your life so much easier, especially if your dataset has dozens or even hundreds of variables 
+- Step 3: Arrange the total column in descending order
+- Step 4: Select only the top 5 rows... I've actually never heard of `top_n()` before, but I just did a quick Google search and found it!
+
+And here we're simply printing out our results:
+```{r}
+medals_top5
+```
 
 ## Visualise our results
 Finally, let's create a visualisation using ggplot!
 - Notice that we use the `+` sign rather than the `%>%` when using ggplot. This may get a little bit confusing at first, but this may be helpful: when using ggplot, think about it as each line is **adding** a new layer to your plot
 ```{r}
 ggplot(medals_top5, aes(x = reorder(team_noc, total, sum), y = total, fill=team_noc)) + # I've reordered the columns based on the sum of the total variable 
-  geom_col() + # flips the cartesian coordinates to make it easier to read the country names
-  coord_flip() + 
+  geom_col() + 
+  coord_flip() + # flips the cartesian coordinates to make it easier to read the country names
   labs(x = "Country", y = "Total Medals") + # you can also add a "title" here if you'd like
   theme_bw() + # there are several default themes but I like this one 
   easy_remove_legend() + # one of my favorite functions from ggeasy to remove the legend
-  easy_text_size(15) # and another one of my favorite functions from ggeasy to change the text size
+  easy_text_size(15) # another one of my favorite functions from ggeasy to change the text size
   
 
 ```
