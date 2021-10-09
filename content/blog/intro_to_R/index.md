@@ -5,7 +5,7 @@ date: "2021-09-06T00:00:00Z"
 draft: false
 featured: false
 image: 
-  caption: "All Artwork by @allison_horst"
+  caption: "all artwork by @allison_horst"
   focal_point: ""
 projects: []
 subtitle: 
@@ -55,9 +55,9 @@ h3 { /* Header 2 */
 
 # My Experiences Teaching R
 
-<p1> During my years as a PhD student, I've had the pleasure to teach hundreds of students in several different psychology courses. However, my favorite courses have involved teaching R to students - many of whom had never even heard or R before. The first time I taught R was to a group of extremely motivated high school students during an intensive summer school program called SciX (Science Extension Program) in January 2021. You can check out my blog on SciX for more details [here](https://jennysloane.netlify.app/blog/scix/). </p1>
+<p1> During my years as a PhD student, I've had the pleasure to teach hundreds of students in several different psychology courses. However, my favorite courses have involved teaching R to students - many of whom had never even heard of R before. The first time I taught R was to a group of extremely motivated high school students during an intensive summer school program called SciX (Science Extension Program) in January 2021. You can check out my blog on SciX for more details [here](https://jennysloane.netlify.app/blog/scix/). </p1>
 
-<p1> A few months later I had the opportunity to be a tutor/Teaching Assistant for a "Psychology Research Internship" course for uni students. In the course, students learned all about open science and reproducibility. In fact, students had the daunting task to try to reproduce plots **in R** from open source, published papers. Every week I ran 1 session that was dedicated to teaching the students new features, packages, and functions in R and 1 session that was dedicated to answering any questions the students had or troubleshoot error messages. In just 10 weeks, students went from not knowing a single thing about R to creating beautiful visualisations and submitting their final reports in Rmarkdown. Their final reports included all of their code and progress from along the way and it was absolutely amazing to see! It was definitely one of the most rewarding experiences for me as a teacher. </p1>
+<p1> A few months later I had the opportunity to be a tutor/Teaching Assistant for a "Psychology Research Internship" course for university students. In the course, students learned all about open science and reproducibility. In fact, students had the daunting task to try to reproduce plots **in R** from open source, published papers. Every week I ran 1 session that was dedicated to teaching the students new features, packages, and functions in R and 1 session that was dedicated to answering any questions the students had or troubleshoot error messages. In just 10 weeks, students went from not knowing a single thing about R to creating beautiful visualisations and submitting their final reports in Rmarkdown. Their final reports included all of their code and progress from along the way and it was absolutely amazing to see! It was definitely one of the most rewarding experiences for me as a teacher. </p1>
 
 <p1> After teaching these courses, I'm keen to share everything I learned about teaching R as I'm sure there are many people out there who have heard about R or want to learn, but have no idea where to start. If this is you, I hope you find this blog helpful! </p1>
 
@@ -79,6 +79,8 @@ h3 { /* Header 2 */
 
 There are 4 panes you will quickly become very familiar with within RStudio
 
+![](images/rstudio.png) 
+
 1. Top Left: This is the **Source Editor** where you write scripts 
     - To test it out, you can go File &rarr; New File &rarr; R Script 
 2. Bottom Left: This is the **Console** where you can type code that you want to run one time and don't want to save it to a script. If you run a line of code in a script, depending on your settings, you may see the output in your console
@@ -97,7 +99,7 @@ There are 4 panes you will quickly become very familiar with within RStudio
 
 Before getting started with some coding, it's important to understand what a working directory is. 
 
-- **What is a working director?** A working directory (wd) is the location where R will look for files. This is where R believes you are located.  
+- **What is a working directory?** A working directory (wd) is the location where R will look for files. This is where R believes you are located.  
 - **How do you know what your wd is?** In the console type `getwd()` to see what's called your "current working directory". You may notice that this path will most likely align with the path at the top of the Files tab because, again, this is where R thinks you are located. If you want load in any files, you must be in the correct working directory or R will return an error saying `cannot open file x: No such file or directory`
 - **How do you set your wd?** There are a few ways you can do this... 
   - Option 1 (not recommended): Session &rarr; Set Working Directory &rarr; Choose Directory and navigate to find the correct folder 
@@ -105,6 +107,9 @@ Before getting started with some coding, it's important to understand what a wor
   - Option 3 (highly recommended!): Create an **R Project** that will automatically set your wd 
   
 # R Projects
+
+![](images/rproj.png) 
+
 - **What is an R Project?** An R project is just a way to keep all of your files associated with any given project together, organized, and easily accessible. If you wish to test out how to set up an R Project, following along with the next few steps. Take a look in the top right hand corner of RStudio and you will see a blue R cube. Assuming you haven't already created a project, it will say "Project: (None)". To create a new project, click on that and select New Project. You will see the following options:
 
 ![](images/project.png) 
@@ -159,7 +164,7 @@ When we created our .R script, we had a blank script, but now we see that we are
 1) The **YAML** header section: this is located at the top of our markdown file, enclosed by `---`
 2) **R chunks**: if you want to write code, you have to create an R chunk, which will always have this formatting: \```{r }...```. This is an example of one:
 
-![](images/chunk_setup.png) 
+![Example R Chunk](images/chunk_setup.png) 
 
 3) All other space: everything outside of the YAML and R chunks is for writing text. Remember, R Markdown is a meant for integrating content/text along with code. So, everything here will be text written in the markdown language and there's no need for the # like we needed in our R script. 
 
@@ -184,16 +189,18 @@ author: Jenny Sloane
 <p1> Note: It's important to pay attention to spacing here. For example, if I had `author:Jenny Sloane` without the space I would have issues with knitting my document. </p1>
 
 ## R Chunks
-We already have a few chunks created for us in our template. In any code chunk, you'll see a few buttons in the top right corner: an options/gear button and 2 arrows. The gear button allows you to modify chunk options (I don't think I've ever used this). Next to the gear button, there's an arrow pointing down, which if you click it will run all of the chunks *above* the current chunk. Finally, the green arrow pointing to the right will run all of the code within that current chunk. Of course you can also run your code line by line the same way as we did in the .R scripts (I usually navigate to the chunk I want to work on, press the arrow pointing down, and then run my code line by line by pressing ctrl + enter). 
+We already have a few chunks created for us in our template. In any code chunk, you'll see a few buttons in the top right corner: an options/gear button and 2 arrows. 
+- The gear button allows you to modify chunk options (I don't think I've ever used this). 
+- Next to the gear button, there's an arrow pointing down, which if you click it will run all of the chunks *above* the current chunk. 
+- Finally, the green arrow pointing to the right will run all of the code within that current chunk. Of course you can also run your code line by line the same way as we did in the .R scripts (I usually navigate to the chunk I want to work on, press the arrow pointing down, and then run my code line by line by pressing ctrl + enter). 
 
 R chunks have certain options you can set. For example, if you want the actual code to appear in your knitted document, you can set `echo=TRUE` and if you only want the output to appear and no code you can set `echo=FALSE`. Other chunk options that I often use are: `include`, `warning`, `message`, and `eval`. 
 
 The first chunk you see in the template is a little bit different. While this chunk is not necessary and you can remove it if you'd like, this is where you can set global chunk options. For example, you can see echo is set to TRUE here, so this means all of the code will appear in your knitted document. You can override the global chunk settings by directly adjusting the options in any specific chunk. 
 
+As a small aside, you may have noticed next to the `r` in the example chunk above it says "pressure". This is where you can set a "name" for you chunk, so it makes sense that this chunk is called pressure as it's plotting pressure. This is just another way to help keep your code and report organized. 
 
-As a small aside, you may have noticed next to the `r` in the first chunk it says "setup". This is where you can set a "name" for you chunk, so it makes sense that this chunk is called setup. This is just another way to help keep your code and report organized. 
-
-<p1> Fun (and helpful) fact: in the top right hand corner of the Source Editor there is a button that is a stack of line. I've heard this referred to as the "pancake button", which I love! If you click on the pancake button, you'll see an outline for your entire document! To use the outline feature, you simply have to include "headers" within your document. You can include headers by using # (see image below for examples). </p1>
+<p1> Fun (and helpful) fact: in the top right hand corner of the Source Editor there is a button that is a stack of line. I've heard this referred to as the *pancake button*, which I love! If you click on the pancake button, you'll see an outline for your entire document! To use the outline feature, you simply have to include "headers" within your document. You can include headers by using # (see image below for examples). </p1>
 
 <p1> :books: Recommended resource: Check out the R Markdown "Cheat Sheet" by going to Help &rarr; Cheat Sheets &rarr; R Markdown Cheat Sheet.
 
@@ -202,11 +209,13 @@ As a small aside, you may have noticed next to the `r` in the first chunk it say
 ## Markdown
 All text outside of the YAML and R chunks is written with `Markdown` syntax. You can easily style your text with bold and italics. You can add headers, lists, equations, links, images, and so much more. Below you can see what code looks like in R Markdown compared to what it looks like when it's knitted to a pdf. 
 
+![](images/markdown.png)
+
+<p1> :books: Recommended resource: [R-Ladies Sydney RYouWithMe MarkyMark Tutorial](https://rladiessydney.org/courses/ryouwithme/04-markymark-0/) </p1>
+
 <p1> :books: Recommended resource: [A great YouTube playlist by Danielle Navarro on R Markdown](https://www.youtube.com/playlist?list=PLRPB0ZzEYegM86awo590bP1MJjQbjdR9E) </p1>
 
 <p1> :books: Recommended resource: [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/) is a great website to learn more about R Markdown. </p1>
-
-![](images/markdown.png)
 
 # Tidyverse!!
 I first learned R in base R, but once I learned about tidyverse there was no going back. There's so much I can say about tidyverse, but I'll only cover some of the basics and continue to provide resources along the way. 
