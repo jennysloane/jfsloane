@@ -32,6 +32,12 @@ p1 {
   font-weight: bold;
 }
 
+p2 {
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: center;
+}
+
 
 h1 { /* Header 2 */
     font-size: 32px;
@@ -55,7 +61,7 @@ h3 { /* Header 2 */
 
 # My Experiences Teaching R
 
-<p1> During my years as a PhD student, I've had the pleasure to teach hundreds of students in several different psychology courses. However, my favorite courses have involved teaching R to students - many of whom had never even heard of R before. The first time I taught R was to a group of extremely motivated high school students during an intensive summer school program called SciX (Science Extension Program) in January 2021. You can check out my blog on SciX for more details [here](https://jennysloane.netlify.app/blog/scix/). </p1>
+<p1> During my years as a PhD student, I've had the pleasure to teach hundreds of students in several different psychology courses. However, my favorite courses have involved teaching R to students - many of whom had never heard of R before. The first time I taught R was to a group of extremely motivated high school students during an intensive summer school program called SciX (Science Extension Program) in January 2021. You can check out my blog on SciX for more details [here](https://jennysloane.netlify.app/blog/scix/). </p1>
 
 <p1> A few months later I had the opportunity to be a tutor/Teaching Assistant for a "Psychology Research Internship" course for university students. In the course, students learned all about open science and reproducibility. In fact, students had the daunting task to try to reproduce plots **in R** from open source, published papers. Every week I ran 1 session that was dedicated to teaching the students new features, packages, and functions in R and 1 session that was dedicated to answering any questions the students had or troubleshoot error messages. In just 10 weeks, students went from not knowing a single thing about R to creating beautiful visualisations and submitting their final reports in Rmarkdown. Their final reports included all of their code and progress from along the way and it was absolutely amazing to see! It was definitely one of the most rewarding experiences for me as a teacher. </p1>
 
@@ -104,7 +110,7 @@ Before getting started with some coding, it's important to understand what a wor
 - **How do you set your wd?** There are a few ways you can do this... 
   - Option 1 (not recommended): Session &rarr; Set Working Directory &rarr; Choose Directory and navigate to find the correct folder 
   - Option 2 (also not recommended): `setwd()` to manually enter the path you want
-  - Option 3 (highly recommended!): Create an **R Project** that will automatically set your wd 
+  - Option 3 (highly recommended!): Create an **R Project** that will automatically set your wd to where your project is saved
   
 # R Projects
 
@@ -123,7 +129,7 @@ Now that we've covered some of the basics, let's write our first R script!
 
 To start, click File &rarr; New File &rarr; R Script. Let's first save our script by clicking on the save icon or ctrl/cmd + S. As I'm not very creative... I'll call my script "r_script". 
 
-<p1> One important note here: it's best practice to avoid using spaces when naming scripts or folders. If you use spaces, you will probably eventually run into an error message, so best to avoid white spaces altogether. </p1>
+<p1> One important note here: it's best practice to avoid using spaces when naming scripts or folders. If you use spaces, you will most likely run into an error message, so best to avoid white spaces altogether. </p1>
 
 I recommend saving this in the same location as your R Project so it's all in the same place and easy to find. If you click on the Files tab, you should see your script is now there! For me, I now have a file called `r_script.R` - notice it has automatically added the extension .R as it's an R Script. You can also see it says `R Script` in the bottom right corner of your Source Editor. 
 
@@ -396,6 +402,45 @@ ggplot(medals_top5, aes(x = reorder(team_noc, total, sum), y = total, fill=team_
   
 
 ```
+
+# ggplot challenge 
+
+I thought it would be fun to end this blog with a bit of a challenge for you to test out all of your new R skills! I've included a few hints below, but remember Google is your best friend. 
+
+*Thanks so much for reading this blog and feel free to share your plots on Twitter and tag me @jfsloane - I'd love to see!* 
+
+<p2> Using the medals dataset (which can be found [here](https://www.kaggle.com/arjunprasadsarkhel/2021-olympics-in-tokyo)), are you able to reproduce the graph below?? </p2>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#medals_raw <- read_csv("content/blog/intro_to_R/data/medals.csv")
+
+medal_standings <- medals_raw %>% 
+  clean_names() %>% 
+  select(team_noc, gold, silver, bronze, total) %>% 
+  arrange(desc(total)) %>% 
+  top_n(5) %>%
+  pivot_longer(cols = gold:bronze, names_to = "medal", values_to = "count")
+  
+medal_standings$medal <- factor(medal_standings$medal, levels = c("gold", "silver", "bronze"), labels = c("Gold", "Silver", "Bronze"))
+
+ggplot(medal_standings, aes(x = reorder(team_noc, total, sum), y = count, fill = medal)) + 
+  geom_bar(position = "stack", stat = "identity") +
+  coord_flip() + 
+  labs(x = "Country", y = "Total Medals") + 
+  geom_text(position=position_stack(vjust=0.5), aes(label = count), size=5) +
+  theme_bw() + 
+  scale_fill_manual(values=c("#FFD700", "#C0C0C0", "#CD7F32")) +
+  easy_text_size(15) + 
+  easy_remove_legend_title() +
+  easy_move_legend("top")
+  
+
+```
+
+- I've used the 5 countries with the most total medals (the same countries as I plotted in the graph above in the section on "Visualise our results")
+- The medal types (gold, silver, bronze) are in a "wide" data format. In other words, gold, silver, and bronze all have their own columns. However, ggplot likes data in a "long" format, so this is the perfect time to look up and learn about `pivot_longer()` 
+- The type of graph I've plotted is called a "stacked barplot"
+- I've manually set the colors using hex codes to get gold = <p1 style="background-color:#FFD700">#FFD700</p1>, silver = <p1 style="background-color:#C0C0C0">#C0C0C0</p1>, and bronze = <p1 style="background-color:#CD7F32">#CD7F32</p1> 
 
 
 <!-- ![](images/art_rollercoaster2.png) -->
