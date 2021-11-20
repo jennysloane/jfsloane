@@ -11,11 +11,11 @@ education:
 email: "j.sloane@unsw.edu.au"
 highlight_name: false
 interests:
-- Cognitive Psychology
+- Cognitive psychology
 - Decision-making and memory
-- Data Science
-- Data Analysis/Statistics
-- Teaching and Mentoring 
+- Data science
+- Data analysis/statistics
+- Teaching and mentoring 
 - RLadies
 organizations:
 - name: University of New South Wales
