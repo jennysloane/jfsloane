@@ -69,9 +69,10 @@ h3 { /* Header 2 */
 
 <p1> In this blog I'll cover what I believe to be the most essential things in order to get started on your coding journey. Of course I won't be able to go into too much detail on any one topic, but I'll provide incredibly useful resources :books: along the way. </p1>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ozgTOQ4bOoI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Installing R and RStudio
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ozgTOQ4bOoI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - R is a free, open source programming language that is often used for statistical and data analyses and visualizations
 - RStudio is an IDE (integrated development environment) for R
@@ -223,9 +224,10 @@ All text outside of the YAML and R chunks is written with `Markdown` syntax. You
 
 <p1> :books: Recommended resource: [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/) is a great website to learn more about R Markdown. </p1>
 
+# Tidyverse!!
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CevBDdAgXIc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Tidyverse!!
 I first learned R in base R, but once I learned about tidyverse there was no going back. There's so much I can say about tidyverse, but I'll only cover some of the basics and continue to provide resources along the way. 
 
 ## What is tidyverse?
