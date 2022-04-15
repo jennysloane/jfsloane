@@ -384,11 +384,11 @@ Below I'll show you my typical workflow using the medals dataset.
 library(tidyverse)
 library(janitor) 
 library(here)
-library(ggeasy) # this is an awesome package to help customize ggplots with easy to remmeber functions
+library(ggeasy) # this is an awesome package to help customize ggplots with easy to remember functions
 ```
 
 - My first chunk of code is always dedicated to loading in all of the libraries I need for my entire script 
-- I make sure the chunk options include `message=FALSE` and `warning=FALSE`, so when I knit the file I don't see all of the messages and warning from loading in the respective libraries
+- I make sure the chunk options include `message=FALSE` and `warning=FALSE`, so when I knit the file I don't see all of the messages and warnings from loading in the respective libraries
 
 
 
@@ -397,8 +397,8 @@ library(ggeasy) # this is an awesome package to help customize ggplots with easy
 ## Read in data 
 
 ```r
-medals_raw <- read_csv(here("data", "medals.csv"))
-# medals_raw <- read_csv("data/medals.csv") # this will also work, if you wish to specify the path directly 
+medals_raw <- read_csv("data/medals.csv")
+# medals_raw <- read_csv(here("data", "medals.csv")) # this will also work, if you wish to use the here package
 
 head(medals_raw) # look at only the top 6 rows
 ```
@@ -416,7 +416,7 @@ head(medals_raw) # look at only the top 6 rows
 ```
 
 - `read_csv()` is very similar to `read.csv()`, except it will automatically read your data in as a tibble (a "tidy" dataframe). For this reason, I exclusively use `read_csv()`
-- I use the `here()` function to tell R that I want it to go within the "data" folder I just created in order to find the "medals.csv" file
+- I could also use the `here()` function to tell R that I want it to go within the "data" folder I just created in order to find the "medals.csv" file
 - We can take a look at the first 6 rows of our raw data using `head()`
 
 <p1> :books: Recommended resource: [How to use the `here` package by Jenny Richmond](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/) </p1>
