@@ -367,6 +367,9 @@ And finally, we see our output: the mean body mass for females Adelie penguins o
 <p1> :books: Recommended resource: [Another fabulous YouTube playlist by Danielle Navarro "say hello to your data"](https://www.youtube.com/playlist?list=PLRPB0ZzEYegPYKRLwJRh4AbWWSiIlzmC7) </p1>
 
 # My Workflow
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TDwJ0Epzq5M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 In this final section, I thought I'd share some tips and an example of my workflow in R. There are many free datasets you can explore within R (e.g. mtcars, iris, penguins from the palmerpenguin package). However, for this blog, I've downloaded a dataset from [Kaggle](https://www.kaggle.com/arjunprasadsarkhel/2021-olympics-in-tokyo) on the medal standings from the Tokyo Olympics.
 
 <center>
