@@ -6,7 +6,7 @@ authors:
 - Jennifer Sloane
 - Chris Donkin
 - Ben Newell
-- Garston Liangs
+- Garston Liang
 
 date: "2020-03-25T00:00:00Z"
 doi: ""

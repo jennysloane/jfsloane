@@ -23,12 +23,25 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
   
 experience:
-  - title: Graduate Student
+  - title: Postdoc Research Fellow
+    company: Houston VA and Baylor College of Medicine
+    company_url: ''
+    location: Houston
+    date_start: '2022-08-15'
+    date_end: ''
+    description: |2-
+        Responsibilities include:
+        
+        * Studying the effects of interruptions on diagnostic decision-making
+        * Conducting research to improve diagnostic decision-making and reduce errors in medicine
+        
+
+  - title: PhD Student
     company: University of New South Wales
     company_url: ''
     location: Sydney
     date_start: '2018-01-01'
-    date_end: ''
+    date_end: '2022-03-01'
     description: |2-
         Responsibilities include:
         
