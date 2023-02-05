@@ -13,20 +13,19 @@ image:
   focal_point: ""
   preview_only: false
 projects: []
-publication: '*Frontiers in Psychology 7*(81)'
+publication: ''
 publication_short: ""
-publication_types:
-- "2"
+ # publication_types:
+ # - "2"
 publishDate: "2016-02-09T00:00:00Z"
 slides: 
 summary: 
 tags:
 - Source Themes
-title: "Using decision models to enhance
-investigations of individual differences in cognitive neuroscience."
+title: "Using decision models to enhance investigations of individual differences in cognitive neuroscience."
 url_code: ""
 url_dataset: ""
-url_pdf: ""
+url_pdf: "https://www.frontiersin.org/articles/10.3389/fpsyg.2016.00081/full"
 url_poster: ""
 url_project: ""
 url_slides: ""

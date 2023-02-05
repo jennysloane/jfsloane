@@ -16,7 +16,7 @@ image:
   focal_point: ""
   preview_only: false
 projects: []
-publication: '*Proceedings of the 41st Annual Conference of the Cognitive Science Society*'
+publication: ''
 publication_short: ""
  # publication_types:
  # - "2"
@@ -28,7 +28,7 @@ tags:
 title: "What's lagging in our understanding of interruptions?: Effects of interruption lags in sequential decision-making."
 url_code: ""
 url_dataset: ""
-url_pdf: ""
+url_pdf: "https://cogsci.mindmodeling.org/2019/papers/0197/0197.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""

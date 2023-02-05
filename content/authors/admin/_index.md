@@ -47,4 +47,4 @@ I'm a postdoc fellow in Health Services Research and Development at the Center f
 
 <!-- I have several years of experience as a teaching assistant for a range of psychology courses. I am also a member of the UNSW Women in Maths and Science Champions Program, where I participate in outreach activities to encourage and inspire women to pursue careers in math and science. -->
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/CV_2022.pdf" "newtab" >}}academic CV{{< /staticref >}} and {{< staticref "media/Resume_2022.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/CV_2023.pdf" "newtab" >}}academic CV{{< /staticref >}} and {{< staticref "media/Resume_2022.pdf" "newtab" >}}resumé{{< /staticref >}}.

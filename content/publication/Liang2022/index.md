@@ -17,7 +17,7 @@ image:
   focal_point: ""
   preview_only: false
 projects: []
-publication: '*Cognitive research: principles and implications 7*(1)*'
+publication: ''
 publication_short: ""
  # publication_types:
  # - "2"
@@ -29,7 +29,7 @@ tags:
 title: "Adapting to the algorithm: how accuracy comparisons promote the use of a decision aid."
 url_code: ""
 url_dataset: ""
-url_pdf: ""
+url_pdf: "https://link.springer.com/article/10.1186/s41235-022-00364-y"
 url_poster: ""
 url_project: ""
 url_slides: ""

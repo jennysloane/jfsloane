@@ -60,10 +60,10 @@ image:
   focal_point: ""
   preview_only: false
 projects: []
-publication: '*Advances in Methods and Practices in Psychological Science 2*(4)'
+publication: ''
 publication_short: ""
-publication_types:
-- "2"
+ # publication_types:
+ # - "2"
 publishDate: "2019-09T00:00:00Z"
 slides: 
 summary: 
@@ -72,7 +72,7 @@ tags:
 title: "Assessing theoretical conclusions with blinded inference to investigate a potential inference crisis."
 url_code: ""
 url_dataset: ""
-url_pdf: ""
+url_pdf: "https://journals.sagepub.com/doi/pdf/10.1177/2515245919869583"
 url_poster: ""
 url_project: ""
 url_slides: ""
