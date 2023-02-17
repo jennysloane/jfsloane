@@ -34,9 +34,9 @@ h1 { /* Header 1 */
 
 </style>
 
-From January 20-24, close to 100 bright, motivated, and eager high school students from across the country came to University of New South Wales to participate in SciX. The SciX program was designed for year 12 students who are enrolled in the Science Extension program (hence the name SciX) to come to campus for an intensive week of attending workshops and research labs. Students applied to over a dozen projects they were interested in on the SciX website. There were many different projects ranging from modeling infectious disease to research on climate change. The full list of projects can be found on the link above. 
+From January 20-24 2020, close to 100 bright, motivated, and eager high school students from across the country came to University of New South Wales to participate in SciX. The SciX program was designed for year 12 students who are enrolled in the Science Extension program (hence the name SciX) to come to campus for an intensive week of attending workshops and research labs. Students applied to over a dozen projects they were interested in on the SciX website. There were many different projects ranging from modeling infectious disease to research on climate change. The full list of projects can be found on the link above. 
 
-Once students were accepted into the program, they began working with a PhD mentor to complete online assignments to prepare them for the summer school in January. Working with Dr. Steven Most, I had the pleasure of mentoring 5 incredible high students in the Cognitive Science project. As the PhD mentor, my responsibilities included: co-designing the research project, creating the online pre-summer school assignments, coding the experiment, and teaching 10 in-person research labs
+Once students were accepted into the program, they began working with a PhD mentor to complete online assignments to prepare them for the summer school in January. Working with Dr. Steven Most, I had the pleasure of mentoring 5 incredible high students in the Cognitive Science project. As the PhD mentor, my responsibilities included: co-designing the research project, creating the online pre-summer school assignments, coding the experiment, and teaching 10 in-person research labs.
 
 ![jpg](./scix1.jpg)
 
