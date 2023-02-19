@@ -8,7 +8,7 @@ image:
   caption: ""
   focal_point: ""
 subtitle: 
-summary: "In this blog, I investigate whether my recent issues breathing could be related to air quality and/or allergies."
+summary: "In this blog, I investigate whether my recent trouble with breathing could be related to air quality and/or allergies."
 title: "Why can't I breathe?"
 toc: true
 output:
@@ -33,19 +33,19 @@ p2 {
 
 
 h1 { /* Header 1 */
-  font-size: 34px;
+  font-size: 32px;
   color: DarkBlue;
   font-weight: bold;
 }
 
 h2 { /* Header 2 */
-  font-size: 26px;
+  font-size: 24px;
   color: DarkBlue;
   font-weight: bold;
 }
 
 h3 { /* Header 3 */
-  font-size: 22px;
+  font-size: 20px;
   color: DarkBlue;
   font-weight: bold;
 }
@@ -58,7 +58,7 @@ For the past 3 weeks I’ve found it difficult to breathe and felt like for the 
 
 As someone who’s lived in many cities including Baltimore, Syracuse, and Sydney, I know that allergies and asthma can change with different climates and geographic locations. My most recent move has brought me to Houston, Texas.
 
-Living in the states most of my life, I was prepared for my allergies to be bad in the fall. So I was pleasantly surprised when I hardly noticed any allergy symptoms during my first fall in Houston. I ended up getting Covid last October, but even then I didn’t experience any trouble breathing.
+Living in the states most of my life, I was prepared for my allergies to be bad in the fall. So I was pleasantly surprised when I hardly noticed any allergy symptoms during my first fall in Houston. I did end up getting Covid last October, but even then I didn’t experience any trouble breathing.
 
 So what has triggered my asthma these past few weeks? In this blog post, I investigate whether it could be related to air quality and/or allergies.
 
@@ -137,22 +137,22 @@ Now that I have my function ready to go, let’s get data from Houston between A
 -   I had never heard of unix time before, so naturally I Googled it. Turns out, unix time is a way to track time in seconds and the count starts at the Unix Epoch on January 1st, 1970 at UTC. Fortunately, I also found [this website](https://www.unixtimestamp.com/) to easily convert dates to unix time.
 
     -   August 12, 2022 = 1660280400
-    -   February 12, 2023 = 1676181600
+    -   February 19, 2023 = 1676786400
 
 ``` r
-houston <- city_function(api_key, my_city = "Houston", my_state = "TX", my_country = "US", start_time = 1660280400, end_time = 1676181600)
+houston <- city_function(api_key, my_city = "Houston", my_state = "TX", my_country = "US", start_time = 1660280400, end_time = 1676786400)
 
 houston %>%
   head(10) %>%
   gt()
 ```
 
-<div id="fincmbpkkf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="plqewubgtw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#fincmbpkkf .gt_table {
+#plqewubgtw .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -177,7 +177,7 @@ houston %>%
   border-left-color: #D3D3D3;
 }
 
-#fincmbpkkf .gt_heading {
+#plqewubgtw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -189,7 +189,7 @@ houston %>%
   border-right-color: #D3D3D3;
 }
 
-#fincmbpkkf .gt_title {
+#plqewubgtw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -201,7 +201,7 @@ houston %>%
   border-bottom-width: 0;
 }
 
-#fincmbpkkf .gt_subtitle {
+#plqewubgtw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -213,13 +213,13 @@ houston %>%
   border-top-width: 0;
 }
 
-#fincmbpkkf .gt_bottom_border {
+#plqewubgtw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fincmbpkkf .gt_col_headings {
+#plqewubgtw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -234,7 +234,7 @@ houston %>%
   border-right-color: #D3D3D3;
 }
 
-#fincmbpkkf .gt_col_heading {
+#plqewubgtw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -254,7 +254,7 @@ houston %>%
   overflow-x: hidden;
 }
 
-#fincmbpkkf .gt_column_spanner_outer {
+#plqewubgtw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -266,15 +266,15 @@ houston %>%
   padding-right: 4px;
 }
 
-#fincmbpkkf .gt_column_spanner_outer:first-child {
+#plqewubgtw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fincmbpkkf .gt_column_spanner_outer:last-child {
+#plqewubgtw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fincmbpkkf .gt_column_spanner {
+#plqewubgtw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -286,7 +286,7 @@ houston %>%
   width: 100%;
 }
 
-#fincmbpkkf .gt_group_heading {
+#plqewubgtw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -311,7 +311,7 @@ houston %>%
   vertical-align: middle;
 }
 
-#fincmbpkkf .gt_empty_group_heading {
+#plqewubgtw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -326,15 +326,15 @@ houston %>%
   vertical-align: middle;
 }
 
-#fincmbpkkf .gt_from_md > :first-child {
+#plqewubgtw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fincmbpkkf .gt_from_md > :last-child {
+#plqewubgtw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fincmbpkkf .gt_row {
+#plqewubgtw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -353,7 +353,7 @@ houston %>%
   overflow-x: hidden;
 }
 
-#fincmbpkkf .gt_stub {
+#plqewubgtw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -366,7 +366,7 @@ houston %>%
   padding-right: 5px;
 }
 
-#fincmbpkkf .gt_stub_row_group {
+#plqewubgtw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -380,11 +380,11 @@ houston %>%
   vertical-align: top;
 }
 
-#fincmbpkkf .gt_row_group_first td {
+#plqewubgtw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fincmbpkkf .gt_summary_row {
+#plqewubgtw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -394,16 +394,16 @@ houston %>%
   padding-right: 5px;
 }
 
-#fincmbpkkf .gt_first_summary_row {
+#plqewubgtw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fincmbpkkf .gt_first_summary_row.thick {
+#plqewubgtw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fincmbpkkf .gt_last_summary_row {
+#plqewubgtw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -413,7 +413,7 @@ houston %>%
   border-bottom-color: #D3D3D3;
 }
 
-#fincmbpkkf .gt_grand_summary_row {
+#plqewubgtw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -423,7 +423,7 @@ houston %>%
   padding-right: 5px;
 }
 
-#fincmbpkkf .gt_first_grand_summary_row {
+#plqewubgtw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -433,11 +433,11 @@ houston %>%
   border-top-color: #D3D3D3;
 }
 
-#fincmbpkkf .gt_striped {
+#plqewubgtw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fincmbpkkf .gt_table_body {
+#plqewubgtw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -446,7 +446,7 @@ houston %>%
   border-bottom-color: #D3D3D3;
 }
 
-#fincmbpkkf .gt_footnotes {
+#plqewubgtw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -460,7 +460,7 @@ houston %>%
   border-right-color: #D3D3D3;
 }
 
-#fincmbpkkf .gt_footnote {
+#plqewubgtw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -469,7 +469,7 @@ houston %>%
   padding-right: 5px;
 }
 
-#fincmbpkkf .gt_sourcenotes {
+#plqewubgtw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -483,7 +483,7 @@ houston %>%
   border-right-color: #D3D3D3;
 }
 
-#fincmbpkkf .gt_sourcenote {
+#plqewubgtw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -491,36 +491,36 @@ houston %>%
   padding-right: 5px;
 }
 
-#fincmbpkkf .gt_left {
+#plqewubgtw .gt_left {
   text-align: left;
 }
 
-#fincmbpkkf .gt_center {
+#plqewubgtw .gt_center {
   text-align: center;
 }
 
-#fincmbpkkf .gt_right {
+#plqewubgtw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fincmbpkkf .gt_font_normal {
+#plqewubgtw .gt_font_normal {
   font-weight: normal;
 }
 
-#fincmbpkkf .gt_font_bold {
+#plqewubgtw .gt_font_bold {
   font-weight: bold;
 }
 
-#fincmbpkkf .gt_font_italic {
+#plqewubgtw .gt_font_italic {
   font-style: italic;
 }
 
-#fincmbpkkf .gt_super {
+#plqewubgtw .gt_super {
   font-size: 65%;
 }
 
-#fincmbpkkf .gt_two_val_uncert {
+#plqewubgtw .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -529,31 +529,31 @@ houston %>%
   margin-left: 0.1em;
 }
 
-#fincmbpkkf .gt_footnote_marks {
+#plqewubgtw .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#fincmbpkkf .gt_asterisk {
+#plqewubgtw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fincmbpkkf .gt_slash_mark {
+#plqewubgtw .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#fincmbpkkf .gt_fraction_numerator {
+#plqewubgtw .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#fincmbpkkf .gt_fraction_denominator {
+#plqewubgtw .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -681,23 +681,12 @@ houston %>%
   
 </table>
 </div>
-<!-- Variables: -->
-<!-- - aqi = air quality index -->
-<!-- - co = carbon monoxide -->
-<!-- - no = nitrogen monoxide -->
-<!-- - no2 = nitrogen dioxide -->
-<!-- - o3 = ozone -->
-<!-- - so2 = sulphur dioxide -->
-<!-- - nh3 = ammonia  -->
-<!-- - pm2_5 = particulates -->
-<!-- - pm2_10 = particulates -->
-<!-- ![Caption for the picture.](aqi_table.png) -->
 
 ## Understanding the Data
 
 -   The table above contains the first 10 rows of the dataset.
 -   Every row contains data for 1 hour for every day. The first row (1660280400) is for August 12th 2022 12am (Central Time). The second row (1672556400) is for August 12th 2022 1am and so on.
--   There’s a lot of data here, but for the purposes of this exploratory analysis and blog post, we’ll focus on the `main.aqi` variable, which is the Air Quality Index (AQI) with possible values: 1, 2, 3, 4, 5, where 1 = Good, 2 = Fair, 3 = Moderate, 4 = Poor, 5 = Very Poor.
+-   There’s a lot of data here, but for the purposes of this exploratory analysis and blog post, we’ll focus on the `main.aqi` variable, which is the **Air Quality Index (AQI)** with the following possible values: 1, 2, 3, 4, 5, where 1 = Good, 2 = Fair, 3 = Moderate, 4 = Poor, 5 = Very Poor.
 
 ## Cleaning the data
 
@@ -730,12 +719,12 @@ houston_clean %>%
   gt()
 ```
 
-<div id="vthcqejptj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="lzwpuybboc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vthcqejptj .gt_table {
+#lzwpuybboc .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -760,7 +749,7 @@ houston_clean %>%
   border-left-color: #D3D3D3;
 }
 
-#vthcqejptj .gt_heading {
+#lzwpuybboc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -772,7 +761,7 @@ houston_clean %>%
   border-right-color: #D3D3D3;
 }
 
-#vthcqejptj .gt_title {
+#lzwpuybboc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -784,7 +773,7 @@ houston_clean %>%
   border-bottom-width: 0;
 }
 
-#vthcqejptj .gt_subtitle {
+#lzwpuybboc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -796,13 +785,13 @@ houston_clean %>%
   border-top-width: 0;
 }
 
-#vthcqejptj .gt_bottom_border {
+#lzwpuybboc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vthcqejptj .gt_col_headings {
+#lzwpuybboc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -817,7 +806,7 @@ houston_clean %>%
   border-right-color: #D3D3D3;
 }
 
-#vthcqejptj .gt_col_heading {
+#lzwpuybboc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -837,7 +826,7 @@ houston_clean %>%
   overflow-x: hidden;
 }
 
-#vthcqejptj .gt_column_spanner_outer {
+#lzwpuybboc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -849,15 +838,15 @@ houston_clean %>%
   padding-right: 4px;
 }
 
-#vthcqejptj .gt_column_spanner_outer:first-child {
+#lzwpuybboc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vthcqejptj .gt_column_spanner_outer:last-child {
+#lzwpuybboc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vthcqejptj .gt_column_spanner {
+#lzwpuybboc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -869,7 +858,7 @@ houston_clean %>%
   width: 100%;
 }
 
-#vthcqejptj .gt_group_heading {
+#lzwpuybboc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -894,7 +883,7 @@ houston_clean %>%
   vertical-align: middle;
 }
 
-#vthcqejptj .gt_empty_group_heading {
+#lzwpuybboc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -909,15 +898,15 @@ houston_clean %>%
   vertical-align: middle;
 }
 
-#vthcqejptj .gt_from_md > :first-child {
+#lzwpuybboc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vthcqejptj .gt_from_md > :last-child {
+#lzwpuybboc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vthcqejptj .gt_row {
+#lzwpuybboc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -936,7 +925,7 @@ houston_clean %>%
   overflow-x: hidden;
 }
 
-#vthcqejptj .gt_stub {
+#lzwpuybboc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -949,7 +938,7 @@ houston_clean %>%
   padding-right: 5px;
 }
 
-#vthcqejptj .gt_stub_row_group {
+#lzwpuybboc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -963,11 +952,11 @@ houston_clean %>%
   vertical-align: top;
 }
 
-#vthcqejptj .gt_row_group_first td {
+#lzwpuybboc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vthcqejptj .gt_summary_row {
+#lzwpuybboc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -977,16 +966,16 @@ houston_clean %>%
   padding-right: 5px;
 }
 
-#vthcqejptj .gt_first_summary_row {
+#lzwpuybboc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vthcqejptj .gt_first_summary_row.thick {
+#lzwpuybboc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vthcqejptj .gt_last_summary_row {
+#lzwpuybboc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -996,7 +985,7 @@ houston_clean %>%
   border-bottom-color: #D3D3D3;
 }
 
-#vthcqejptj .gt_grand_summary_row {
+#lzwpuybboc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1006,7 +995,7 @@ houston_clean %>%
   padding-right: 5px;
 }
 
-#vthcqejptj .gt_first_grand_summary_row {
+#lzwpuybboc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1016,11 +1005,11 @@ houston_clean %>%
   border-top-color: #D3D3D3;
 }
 
-#vthcqejptj .gt_striped {
+#lzwpuybboc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vthcqejptj .gt_table_body {
+#lzwpuybboc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1029,7 +1018,7 @@ houston_clean %>%
   border-bottom-color: #D3D3D3;
 }
 
-#vthcqejptj .gt_footnotes {
+#lzwpuybboc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1043,7 +1032,7 @@ houston_clean %>%
   border-right-color: #D3D3D3;
 }
 
-#vthcqejptj .gt_footnote {
+#lzwpuybboc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1052,7 +1041,7 @@ houston_clean %>%
   padding-right: 5px;
 }
 
-#vthcqejptj .gt_sourcenotes {
+#lzwpuybboc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1066,7 +1055,7 @@ houston_clean %>%
   border-right-color: #D3D3D3;
 }
 
-#vthcqejptj .gt_sourcenote {
+#lzwpuybboc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1074,36 +1063,36 @@ houston_clean %>%
   padding-right: 5px;
 }
 
-#vthcqejptj .gt_left {
+#lzwpuybboc .gt_left {
   text-align: left;
 }
 
-#vthcqejptj .gt_center {
+#lzwpuybboc .gt_center {
   text-align: center;
 }
 
-#vthcqejptj .gt_right {
+#lzwpuybboc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vthcqejptj .gt_font_normal {
+#lzwpuybboc .gt_font_normal {
   font-weight: normal;
 }
 
-#vthcqejptj .gt_font_bold {
+#lzwpuybboc .gt_font_bold {
   font-weight: bold;
 }
 
-#vthcqejptj .gt_font_italic {
+#lzwpuybboc .gt_font_italic {
   font-style: italic;
 }
 
-#vthcqejptj .gt_super {
+#lzwpuybboc .gt_super {
   font-size: 65%;
 }
 
-#vthcqejptj .gt_two_val_uncert {
+#lzwpuybboc .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -1112,31 +1101,31 @@ houston_clean %>%
   margin-left: 0.1em;
 }
 
-#vthcqejptj .gt_footnote_marks {
+#lzwpuybboc .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#vthcqejptj .gt_asterisk {
+#lzwpuybboc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vthcqejptj .gt_slash_mark {
+#lzwpuybboc .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#vthcqejptj .gt_fraction_numerator {
+#lzwpuybboc .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#vthcqejptj .gt_fraction_denominator {
+#lzwpuybboc .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -1270,7 +1259,7 @@ houston_clean %>%
 
 ## Graphing the Results
 
-An AQI score of 2 is fair with an NO2 values between 51-100 and it’s recommended that “Unusually sensitive individuals should consider limiting prolonged outdoor exertion”, so I’ve added a dashed black line to the graph at the AQI score of 2.
+An AQI score of 2 is fair with an NO2 values between 51-100 and it’s recommended that “Unusually sensitive individuals should consider limiting prolonged outdoor exertion”, so I’ve added a dashed black line to the graph where the AQI score equals 2.
 
 ``` r
 ggplot(houston_clean, aes(date, main.aqi, color = "#D95F02")) +
@@ -1282,7 +1271,7 @@ ggplot(houston_clean, aes(date, main.aqi, color = "#D95F02")) +
   easy_remove_legend()
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
 ## Interpreting the Results
 
@@ -1292,15 +1281,15 @@ ggplot(houston_clean, aes(date, main.aqi, color = "#D95F02")) +
 
 # Air Quality Over Time in Cities I’ve Lived
 
-Although I hoped to explore the data over the past 30 years (since I’m 30), I discovered that this API only has historical data dating back to November 27th 2020. So, that’s what I’ll use!
+Although I originally hoped to explore the data over the past 30 years (since I’m 30), I discovered that this API only has historical data dating back to November 27th 2020. So, that’s what I’ll use!
 
 My goal here is to graph average API scores in the cities where I’ve lived (Baltimore, Syracuse, Sydney, and Houston) since November 2020. Because this is a blog post, I’ll spare the details of the code and simply show you the data and the results (but I use the same functions as above).
 
 ## City Data: Baltimore, Houston, Sydney, and Syracuse
 
--   First, I made separate API calls to get data for Baltimore, Houston, Sydney and Syracuse
--   Then, I combined all the data into one data set called `city_data`
--   Finally, I summarized the data to get an average API score for every month in every city
+-   First, I made separate API calls to get data for Baltimore, Houston, Sydney and Syracuse.
+-   Then, I combined all the data into one data set called `city_data`.
+-   Finally, I summarized the data to get an average API score for every month in every city.
 -   Here are the first 10 rows:
 
 ``` r
@@ -1309,12 +1298,12 @@ city_data %>%
   gt()
 ```
 
-<div id="jzallsvzfp" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jtfnzpgnjb" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#jzallsvzfp .gt_table {
+#jtfnzpgnjb .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1339,7 +1328,7 @@ city_data %>%
   border-left-color: #D3D3D3;
 }
 
-#jzallsvzfp .gt_heading {
+#jtfnzpgnjb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1351,7 +1340,7 @@ city_data %>%
   border-right-color: #D3D3D3;
 }
 
-#jzallsvzfp .gt_title {
+#jtfnzpgnjb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1363,7 +1352,7 @@ city_data %>%
   border-bottom-width: 0;
 }
 
-#jzallsvzfp .gt_subtitle {
+#jtfnzpgnjb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1375,13 +1364,13 @@ city_data %>%
   border-top-width: 0;
 }
 
-#jzallsvzfp .gt_bottom_border {
+#jtfnzpgnjb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jzallsvzfp .gt_col_headings {
+#jtfnzpgnjb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1396,7 +1385,7 @@ city_data %>%
   border-right-color: #D3D3D3;
 }
 
-#jzallsvzfp .gt_col_heading {
+#jtfnzpgnjb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1416,7 +1405,7 @@ city_data %>%
   overflow-x: hidden;
 }
 
-#jzallsvzfp .gt_column_spanner_outer {
+#jtfnzpgnjb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1428,15 +1417,15 @@ city_data %>%
   padding-right: 4px;
 }
 
-#jzallsvzfp .gt_column_spanner_outer:first-child {
+#jtfnzpgnjb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jzallsvzfp .gt_column_spanner_outer:last-child {
+#jtfnzpgnjb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jzallsvzfp .gt_column_spanner {
+#jtfnzpgnjb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1448,7 +1437,7 @@ city_data %>%
   width: 100%;
 }
 
-#jzallsvzfp .gt_group_heading {
+#jtfnzpgnjb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1473,7 +1462,7 @@ city_data %>%
   vertical-align: middle;
 }
 
-#jzallsvzfp .gt_empty_group_heading {
+#jtfnzpgnjb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1488,15 +1477,15 @@ city_data %>%
   vertical-align: middle;
 }
 
-#jzallsvzfp .gt_from_md > :first-child {
+#jtfnzpgnjb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jzallsvzfp .gt_from_md > :last-child {
+#jtfnzpgnjb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jzallsvzfp .gt_row {
+#jtfnzpgnjb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1515,7 +1504,7 @@ city_data %>%
   overflow-x: hidden;
 }
 
-#jzallsvzfp .gt_stub {
+#jtfnzpgnjb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1528,7 +1517,7 @@ city_data %>%
   padding-right: 5px;
 }
 
-#jzallsvzfp .gt_stub_row_group {
+#jtfnzpgnjb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1542,11 +1531,11 @@ city_data %>%
   vertical-align: top;
 }
 
-#jzallsvzfp .gt_row_group_first td {
+#jtfnzpgnjb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jzallsvzfp .gt_summary_row {
+#jtfnzpgnjb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1556,16 +1545,16 @@ city_data %>%
   padding-right: 5px;
 }
 
-#jzallsvzfp .gt_first_summary_row {
+#jtfnzpgnjb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jzallsvzfp .gt_first_summary_row.thick {
+#jtfnzpgnjb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jzallsvzfp .gt_last_summary_row {
+#jtfnzpgnjb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1575,7 +1564,7 @@ city_data %>%
   border-bottom-color: #D3D3D3;
 }
 
-#jzallsvzfp .gt_grand_summary_row {
+#jtfnzpgnjb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1585,7 +1574,7 @@ city_data %>%
   padding-right: 5px;
 }
 
-#jzallsvzfp .gt_first_grand_summary_row {
+#jtfnzpgnjb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1595,11 +1584,11 @@ city_data %>%
   border-top-color: #D3D3D3;
 }
 
-#jzallsvzfp .gt_striped {
+#jtfnzpgnjb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jzallsvzfp .gt_table_body {
+#jtfnzpgnjb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1608,7 +1597,7 @@ city_data %>%
   border-bottom-color: #D3D3D3;
 }
 
-#jzallsvzfp .gt_footnotes {
+#jtfnzpgnjb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1622,7 +1611,7 @@ city_data %>%
   border-right-color: #D3D3D3;
 }
 
-#jzallsvzfp .gt_footnote {
+#jtfnzpgnjb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1631,7 +1620,7 @@ city_data %>%
   padding-right: 5px;
 }
 
-#jzallsvzfp .gt_sourcenotes {
+#jtfnzpgnjb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1645,7 +1634,7 @@ city_data %>%
   border-right-color: #D3D3D3;
 }
 
-#jzallsvzfp .gt_sourcenote {
+#jtfnzpgnjb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1653,36 +1642,36 @@ city_data %>%
   padding-right: 5px;
 }
 
-#jzallsvzfp .gt_left {
+#jtfnzpgnjb .gt_left {
   text-align: left;
 }
 
-#jzallsvzfp .gt_center {
+#jtfnzpgnjb .gt_center {
   text-align: center;
 }
 
-#jzallsvzfp .gt_right {
+#jtfnzpgnjb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jzallsvzfp .gt_font_normal {
+#jtfnzpgnjb .gt_font_normal {
   font-weight: normal;
 }
 
-#jzallsvzfp .gt_font_bold {
+#jtfnzpgnjb .gt_font_bold {
   font-weight: bold;
 }
 
-#jzallsvzfp .gt_font_italic {
+#jtfnzpgnjb .gt_font_italic {
   font-style: italic;
 }
 
-#jzallsvzfp .gt_super {
+#jtfnzpgnjb .gt_super {
   font-size: 65%;
 }
 
-#jzallsvzfp .gt_two_val_uncert {
+#jtfnzpgnjb .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -1691,31 +1680,31 @@ city_data %>%
   margin-left: 0.1em;
 }
 
-#jzallsvzfp .gt_footnote_marks {
+#jtfnzpgnjb .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#jzallsvzfp .gt_asterisk {
+#jtfnzpgnjb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jzallsvzfp .gt_slash_mark {
+#jtfnzpgnjb .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#jzallsvzfp .gt_fraction_numerator {
+#jtfnzpgnjb .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#jzallsvzfp .gt_fraction_denominator {
+#jtfnzpgnjb .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -1791,22 +1780,24 @@ city_data %>%
 
 ## Graphing the Results
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-8-1.png" width="960" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="960" />
 
 -   In general, it looks like AQI scores have been increasing over the past couple of years, with the most noticeable increases in Houston and Syracuse.
--   Remember, higher AQI means poorer air quality, so this is not a good thing! Although, it’s also not a huge surprise given what we know about climate change.
+-   Remember, higher AQI means poorer air quality, so this is not a good thing!
 -   Out of these cities, it looks like Sydney has done the best job at maintaining a relatively low and stable AQI score.
 -   It would be really interesting to see these results over the past 30 years… so if anyone knows of another open source API with air quality scores, please let me know!
 
 # **Allergies** in Houston
 
-Unfortunately, I could not find an open source API that has allergy data. But, I was able to find some useful websites from [Pollen.com](https://www.pollen.com/research/77002) and [asthmaforecast.com](https://www.asthmaforecast.com/forecast/historic/asthma/77002). *Images are screenshots taken directly from the respective websites*:
+Unfortunately, I could not find an open source API that has allergy data. But, I was able to find some useful websites from [Pollen.com](https://www.pollen.com/research/77002) and [asthmaforecast.com](https://www.asthmaforecast.com/forecast/historic/asthma/77002).
+
+*Images are screenshots taken directly from the respective websites.*
 
 ## Allergies
 
-    - I immediately discovered that we are approaching peak allergy season (at least for trees)
-    - Reading more on the website, I learned that the most significant allergens are: ash-leaf maple, green ash, red mulberry, and white ash
-    - This is unfortunate for me because according to my allergy scratch test in 2016, I am **very** allergic (like highest score on the test) to maple and ash and it looks like my allergies may get even worse in March 😫
+-   I immediately discovered that we are approaching peak allergy season (at least for trees) in Houston.
+-   Reading more on the website, I learned that the most significant allergens are: ash-leaf maple, green ash, red mulberry, and white ash.
+-   This is unfortunate for me because according to my allergy scratch test in 2016, I am **very** allergic to maple and ash and it looks like my allergies may get even worse in March 😫
 
 <!-- frustrated -->
 
@@ -1815,7 +1806,7 @@ Unfortunately, I could not find an open source API that has allergy data. But, I
 
 ## Asthma
 
-    - After learning that winter is a peak season for allergies in Houston, I was not all that surprised to see that asthma levels are also on a rise this time of year
+-   After learning that winter is a peak season for allergies in Houston, I was not all that surprised to see that asthma levels are also on a rise this time of year.
 
 ![](asthma_30days.png)
 
@@ -1827,8 +1818,8 @@ Even though it seems unlikely that air quality contributed to my difficulty brea
 
 Here are a few key takeaways I’d like to share:
 
+-   It is important to understand your body and take proactive steps in managing your health. For me, this means understanding when my allergies and asthma will likely be bad and that I need to be prepared with allergy medications and inhalers when needed.
 -   I learned that the air quality in Houston *can* get bad, which could trigger asthma symptoms. So, just as a precaution I try to always have my rescue inhaler with me wherever I go.
 -   I love running, but now I have AirVisual app on my phone and I check the air quality before setting off for a run (especially if it’s a longer run). If the AQI is above 50, I’ll either do a different indoor workout or I’ll postpone my run until the AQI has decreased.
--   I hope this blog post was interesting, but also helped to raise awareness, specifically to the dangers of poor air quality.
 
 <!-- I'm no expert in this matter, but I can only guess that pollution and climate change will continue to negatively impact our air quality unless we act.  -->
