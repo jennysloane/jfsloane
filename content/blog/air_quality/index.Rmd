@@ -190,7 +190,7 @@ houston_clean %>%
 
 ## Graphing the Results
 
-An AQI score of 2 is "fair" with an NO2 values between 51-100 and it's recommended that "Unusually sensitive individuals should consider limiting prolonged outdoor exertion", so I've added a black dashed line to the graph where the AQI score equals 2. 
+An AQI score of 2 is "fair" and it's recommended that "Unusually sensitive individuals should consider limiting prolonged outdoor exertion", so I've added a black dashed line to the graph where the AQI score equals 2. 
 
 ```{r}
 ggplot(houston_clean, aes(date, main.aqi, color = "#D95F02")) +
@@ -324,18 +324,22 @@ Unfortunately, I couldn't find an open source API that has allergy data. But, I 
 
 # So, why can't I breathe? 
 
-It seems pretty clear that it's because my allergies are probably really bad this time of year in Houston. Even though I've never experienced bad allergies in winter, Houston is a completely different climate compared to other cities I've lived. For example, as we can see from the allergy map, tree allergy is low this time of year in Baltimore, where I grew up. 
+It seems clear that my difficulty breathing is because my allergies are bad this time of year in Houston. Even though I've never experienced bad allergies in winter, Houston is a completely different climate compared to other cities I've lived. For example, as we can see from the allergy map, tree allergy is low this time of year in Baltimore, where I grew up.
 
-Even though it seems unlikely that air quality contributed to my difficulty breathing, I still learned a lot from the data! 
+While it seems unlikely that air quality contributed to my difficulty breathing, I still learned a lot from the data! 
+
+## Takeaways 
 
 Here are a few key takeaways I'd like to share:
 
-- It is important to understand your body and take proactive steps in managing your health. For me, this means understanding when my allergies and asthma will likely be bad and that I need to be prepared with allergy medications and inhalers when needed. 
-  - For example, I love running, but now I have the AirVisual app on my phone and I check the air quality before setting off for a run (especially if it's a longer run). If the AQI is above 50, I'll either do a different indoor workout or I'll postpone my run until the AQI has decreased.
-- I learned that the air quality in Houston *can* get bad, which could trigger asthma symptoms. So, just as a precaution I try to always have my rescue inhaler with me wherever I go. 
-- As I was writing this blog, I wondered how climate change has impacted our air. Here are two articles from the CDC and EPA that warn against the potential dangers of climate change and, specifically, how climate change does negatively affect our air quality. 
+- I should be prepared for bad allergies in the winter, at least while I'm living in Houston.
+- I learned that the air quality in Houston *can* get bad, which could trigger asthma symptoms. So, just as a precaution I try to always have my rescue inhaler with me wherever I go.
+- In general, I'm now more conscious of air quality. For example, I love running, but I've recently downloaded the AirVisual app and I check the air quality before setting off for a run (especially if it's a longer run). If the AQI is anything other than "Good", I'll either do a different indoor workout or I'll postpone my run until the AQI has improved.
+- Seeing the increase in AQI over the past few years in some of the cities where I've lived, I wondered how climate change could be impacting our air quality. Here are two articles from the CDC and EPA that discuss how climate change negatively affects our air quality: 
   - [EPA: Climate Change Impacts on Air Quality](https://www.epa.gov/climateimpacts/climate-change-impacts-air-quality)
   - [CDC: Climate Change Decreases the Quality of the Air We Breathe](https://www.cdc.gov/climateandhealth/pubs/air-quality-final_508.pdf)
 
+As always, thanks for reading!
 
-<!-- I'm no expert in this matter, but I can only guess that pollution and climate change will continue to negatively impact our air quality unless we act.  -->
+<!-- - It is important to understand your body and take proactive steps in managing your health. For me, this means understanding when my allergies and asthma will likely be bad and that I need to be prepared with allergy medications and inhalers when needed.  -->
+<!--   -  -->

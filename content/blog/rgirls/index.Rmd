@@ -154,4 +154,4 @@ wordcloud(d$word, d$freq, random.order = FALSE, scale=c(3,.5), rot.per = .3, col
 ```
 
 
-
+Thanks for reading!

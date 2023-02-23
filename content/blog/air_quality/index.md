@@ -147,12 +147,12 @@ houston %>%
   gt()
 ```
 
-<div id="vffhskpwkw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="vxijepvgam" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vffhskpwkw .gt_table {
+#vxijepvgam .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -177,7 +177,7 @@ houston %>%
   border-left-color: #D3D3D3;
 }
 
-#vffhskpwkw .gt_heading {
+#vxijepvgam .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -189,7 +189,7 @@ houston %>%
   border-right-color: #D3D3D3;
 }
 
-#vffhskpwkw .gt_title {
+#vxijepvgam .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -201,7 +201,7 @@ houston %>%
   border-bottom-width: 0;
 }
 
-#vffhskpwkw .gt_subtitle {
+#vxijepvgam .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -213,13 +213,13 @@ houston %>%
   border-top-width: 0;
 }
 
-#vffhskpwkw .gt_bottom_border {
+#vxijepvgam .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vffhskpwkw .gt_col_headings {
+#vxijepvgam .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -234,7 +234,7 @@ houston %>%
   border-right-color: #D3D3D3;
 }
 
-#vffhskpwkw .gt_col_heading {
+#vxijepvgam .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -254,7 +254,7 @@ houston %>%
   overflow-x: hidden;
 }
 
-#vffhskpwkw .gt_column_spanner_outer {
+#vxijepvgam .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -266,15 +266,15 @@ houston %>%
   padding-right: 4px;
 }
 
-#vffhskpwkw .gt_column_spanner_outer:first-child {
+#vxijepvgam .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vffhskpwkw .gt_column_spanner_outer:last-child {
+#vxijepvgam .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vffhskpwkw .gt_column_spanner {
+#vxijepvgam .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -286,7 +286,7 @@ houston %>%
   width: 100%;
 }
 
-#vffhskpwkw .gt_group_heading {
+#vxijepvgam .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -311,7 +311,7 @@ houston %>%
   vertical-align: middle;
 }
 
-#vffhskpwkw .gt_empty_group_heading {
+#vxijepvgam .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -326,15 +326,15 @@ houston %>%
   vertical-align: middle;
 }
 
-#vffhskpwkw .gt_from_md > :first-child {
+#vxijepvgam .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vffhskpwkw .gt_from_md > :last-child {
+#vxijepvgam .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vffhskpwkw .gt_row {
+#vxijepvgam .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -353,7 +353,7 @@ houston %>%
   overflow-x: hidden;
 }
 
-#vffhskpwkw .gt_stub {
+#vxijepvgam .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -366,7 +366,7 @@ houston %>%
   padding-right: 5px;
 }
 
-#vffhskpwkw .gt_stub_row_group {
+#vxijepvgam .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -380,11 +380,11 @@ houston %>%
   vertical-align: top;
 }
 
-#vffhskpwkw .gt_row_group_first td {
+#vxijepvgam .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vffhskpwkw .gt_summary_row {
+#vxijepvgam .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -394,16 +394,16 @@ houston %>%
   padding-right: 5px;
 }
 
-#vffhskpwkw .gt_first_summary_row {
+#vxijepvgam .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vffhskpwkw .gt_first_summary_row.thick {
+#vxijepvgam .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vffhskpwkw .gt_last_summary_row {
+#vxijepvgam .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -413,7 +413,7 @@ houston %>%
   border-bottom-color: #D3D3D3;
 }
 
-#vffhskpwkw .gt_grand_summary_row {
+#vxijepvgam .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -423,7 +423,7 @@ houston %>%
   padding-right: 5px;
 }
 
-#vffhskpwkw .gt_first_grand_summary_row {
+#vxijepvgam .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -433,11 +433,11 @@ houston %>%
   border-top-color: #D3D3D3;
 }
 
-#vffhskpwkw .gt_striped {
+#vxijepvgam .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vffhskpwkw .gt_table_body {
+#vxijepvgam .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -446,7 +446,7 @@ houston %>%
   border-bottom-color: #D3D3D3;
 }
 
-#vffhskpwkw .gt_footnotes {
+#vxijepvgam .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -460,7 +460,7 @@ houston %>%
   border-right-color: #D3D3D3;
 }
 
-#vffhskpwkw .gt_footnote {
+#vxijepvgam .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -469,7 +469,7 @@ houston %>%
   padding-right: 5px;
 }
 
-#vffhskpwkw .gt_sourcenotes {
+#vxijepvgam .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -483,7 +483,7 @@ houston %>%
   border-right-color: #D3D3D3;
 }
 
-#vffhskpwkw .gt_sourcenote {
+#vxijepvgam .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -491,36 +491,36 @@ houston %>%
   padding-right: 5px;
 }
 
-#vffhskpwkw .gt_left {
+#vxijepvgam .gt_left {
   text-align: left;
 }
 
-#vffhskpwkw .gt_center {
+#vxijepvgam .gt_center {
   text-align: center;
 }
 
-#vffhskpwkw .gt_right {
+#vxijepvgam .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vffhskpwkw .gt_font_normal {
+#vxijepvgam .gt_font_normal {
   font-weight: normal;
 }
 
-#vffhskpwkw .gt_font_bold {
+#vxijepvgam .gt_font_bold {
   font-weight: bold;
 }
 
-#vffhskpwkw .gt_font_italic {
+#vxijepvgam .gt_font_italic {
   font-style: italic;
 }
 
-#vffhskpwkw .gt_super {
+#vxijepvgam .gt_super {
   font-size: 65%;
 }
 
-#vffhskpwkw .gt_two_val_uncert {
+#vxijepvgam .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -529,31 +529,31 @@ houston %>%
   margin-left: 0.1em;
 }
 
-#vffhskpwkw .gt_footnote_marks {
+#vxijepvgam .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#vffhskpwkw .gt_asterisk {
+#vxijepvgam .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vffhskpwkw .gt_slash_mark {
+#vxijepvgam .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#vffhskpwkw .gt_fraction_numerator {
+#vxijepvgam .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#vffhskpwkw .gt_fraction_denominator {
+#vxijepvgam .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -720,12 +720,12 @@ houston_clean %>%
   gt()
 ```
 
-<div id="lejcaxiepf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jndpvwszlw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#lejcaxiepf .gt_table {
+#jndpvwszlw .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -750,7 +750,7 @@ houston_clean %>%
   border-left-color: #D3D3D3;
 }
 
-#lejcaxiepf .gt_heading {
+#jndpvwszlw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -762,7 +762,7 @@ houston_clean %>%
   border-right-color: #D3D3D3;
 }
 
-#lejcaxiepf .gt_title {
+#jndpvwszlw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -774,7 +774,7 @@ houston_clean %>%
   border-bottom-width: 0;
 }
 
-#lejcaxiepf .gt_subtitle {
+#jndpvwszlw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -786,13 +786,13 @@ houston_clean %>%
   border-top-width: 0;
 }
 
-#lejcaxiepf .gt_bottom_border {
+#jndpvwszlw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lejcaxiepf .gt_col_headings {
+#jndpvwszlw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -807,7 +807,7 @@ houston_clean %>%
   border-right-color: #D3D3D3;
 }
 
-#lejcaxiepf .gt_col_heading {
+#jndpvwszlw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -827,7 +827,7 @@ houston_clean %>%
   overflow-x: hidden;
 }
 
-#lejcaxiepf .gt_column_spanner_outer {
+#jndpvwszlw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -839,15 +839,15 @@ houston_clean %>%
   padding-right: 4px;
 }
 
-#lejcaxiepf .gt_column_spanner_outer:first-child {
+#jndpvwszlw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lejcaxiepf .gt_column_spanner_outer:last-child {
+#jndpvwszlw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lejcaxiepf .gt_column_spanner {
+#jndpvwszlw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -859,7 +859,7 @@ houston_clean %>%
   width: 100%;
 }
 
-#lejcaxiepf .gt_group_heading {
+#jndpvwszlw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -884,7 +884,7 @@ houston_clean %>%
   vertical-align: middle;
 }
 
-#lejcaxiepf .gt_empty_group_heading {
+#jndpvwszlw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -899,15 +899,15 @@ houston_clean %>%
   vertical-align: middle;
 }
 
-#lejcaxiepf .gt_from_md > :first-child {
+#jndpvwszlw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lejcaxiepf .gt_from_md > :last-child {
+#jndpvwszlw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lejcaxiepf .gt_row {
+#jndpvwszlw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -926,7 +926,7 @@ houston_clean %>%
   overflow-x: hidden;
 }
 
-#lejcaxiepf .gt_stub {
+#jndpvwszlw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -939,7 +939,7 @@ houston_clean %>%
   padding-right: 5px;
 }
 
-#lejcaxiepf .gt_stub_row_group {
+#jndpvwszlw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -953,11 +953,11 @@ houston_clean %>%
   vertical-align: top;
 }
 
-#lejcaxiepf .gt_row_group_first td {
+#jndpvwszlw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lejcaxiepf .gt_summary_row {
+#jndpvwszlw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -967,16 +967,16 @@ houston_clean %>%
   padding-right: 5px;
 }
 
-#lejcaxiepf .gt_first_summary_row {
+#jndpvwszlw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lejcaxiepf .gt_first_summary_row.thick {
+#jndpvwszlw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lejcaxiepf .gt_last_summary_row {
+#jndpvwszlw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -986,7 +986,7 @@ houston_clean %>%
   border-bottom-color: #D3D3D3;
 }
 
-#lejcaxiepf .gt_grand_summary_row {
+#jndpvwszlw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -996,7 +996,7 @@ houston_clean %>%
   padding-right: 5px;
 }
 
-#lejcaxiepf .gt_first_grand_summary_row {
+#jndpvwszlw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1006,11 +1006,11 @@ houston_clean %>%
   border-top-color: #D3D3D3;
 }
 
-#lejcaxiepf .gt_striped {
+#jndpvwszlw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lejcaxiepf .gt_table_body {
+#jndpvwszlw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1019,7 +1019,7 @@ houston_clean %>%
   border-bottom-color: #D3D3D3;
 }
 
-#lejcaxiepf .gt_footnotes {
+#jndpvwszlw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1033,7 +1033,7 @@ houston_clean %>%
   border-right-color: #D3D3D3;
 }
 
-#lejcaxiepf .gt_footnote {
+#jndpvwszlw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1042,7 +1042,7 @@ houston_clean %>%
   padding-right: 5px;
 }
 
-#lejcaxiepf .gt_sourcenotes {
+#jndpvwszlw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1056,7 +1056,7 @@ houston_clean %>%
   border-right-color: #D3D3D3;
 }
 
-#lejcaxiepf .gt_sourcenote {
+#jndpvwszlw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1064,36 +1064,36 @@ houston_clean %>%
   padding-right: 5px;
 }
 
-#lejcaxiepf .gt_left {
+#jndpvwszlw .gt_left {
   text-align: left;
 }
 
-#lejcaxiepf .gt_center {
+#jndpvwszlw .gt_center {
   text-align: center;
 }
 
-#lejcaxiepf .gt_right {
+#jndpvwszlw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lejcaxiepf .gt_font_normal {
+#jndpvwszlw .gt_font_normal {
   font-weight: normal;
 }
 
-#lejcaxiepf .gt_font_bold {
+#jndpvwszlw .gt_font_bold {
   font-weight: bold;
 }
 
-#lejcaxiepf .gt_font_italic {
+#jndpvwszlw .gt_font_italic {
   font-style: italic;
 }
 
-#lejcaxiepf .gt_super {
+#jndpvwszlw .gt_super {
   font-size: 65%;
 }
 
-#lejcaxiepf .gt_two_val_uncert {
+#jndpvwszlw .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -1102,31 +1102,31 @@ houston_clean %>%
   margin-left: 0.1em;
 }
 
-#lejcaxiepf .gt_footnote_marks {
+#jndpvwszlw .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#lejcaxiepf .gt_asterisk {
+#jndpvwszlw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lejcaxiepf .gt_slash_mark {
+#jndpvwszlw .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#lejcaxiepf .gt_fraction_numerator {
+#jndpvwszlw .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#lejcaxiepf .gt_fraction_denominator {
+#jndpvwszlw .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -1260,7 +1260,7 @@ houston_clean %>%
 
 ## Graphing the Results
 
-An AQI score of 2 is “fair” with an NO2 values between 51-100 and it’s recommended that “Unusually sensitive individuals should consider limiting prolonged outdoor exertion”, so I’ve added a black dashed line to the graph where the AQI score equals 2.
+An AQI score of 2 is “fair” and it’s recommended that “Unusually sensitive individuals should consider limiting prolonged outdoor exertion”, so I’ve added a black dashed line to the graph where the AQI score equals 2.
 
 ``` r
 ggplot(houston_clean, aes(date, main.aqi, color = "#D95F02")) +
@@ -1299,12 +1299,12 @@ city_data %>%
   gt()
 ```
 
-<div id="jocqbnirni" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="cpshmmmiqn" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#jocqbnirni .gt_table {
+#cpshmmmiqn .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1329,7 +1329,7 @@ city_data %>%
   border-left-color: #D3D3D3;
 }
 
-#jocqbnirni .gt_heading {
+#cpshmmmiqn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1341,7 +1341,7 @@ city_data %>%
   border-right-color: #D3D3D3;
 }
 
-#jocqbnirni .gt_title {
+#cpshmmmiqn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1353,7 +1353,7 @@ city_data %>%
   border-bottom-width: 0;
 }
 
-#jocqbnirni .gt_subtitle {
+#cpshmmmiqn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1365,13 +1365,13 @@ city_data %>%
   border-top-width: 0;
 }
 
-#jocqbnirni .gt_bottom_border {
+#cpshmmmiqn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jocqbnirni .gt_col_headings {
+#cpshmmmiqn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1386,7 +1386,7 @@ city_data %>%
   border-right-color: #D3D3D3;
 }
 
-#jocqbnirni .gt_col_heading {
+#cpshmmmiqn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1406,7 +1406,7 @@ city_data %>%
   overflow-x: hidden;
 }
 
-#jocqbnirni .gt_column_spanner_outer {
+#cpshmmmiqn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1418,15 +1418,15 @@ city_data %>%
   padding-right: 4px;
 }
 
-#jocqbnirni .gt_column_spanner_outer:first-child {
+#cpshmmmiqn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jocqbnirni .gt_column_spanner_outer:last-child {
+#cpshmmmiqn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jocqbnirni .gt_column_spanner {
+#cpshmmmiqn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1438,7 +1438,7 @@ city_data %>%
   width: 100%;
 }
 
-#jocqbnirni .gt_group_heading {
+#cpshmmmiqn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1463,7 +1463,7 @@ city_data %>%
   vertical-align: middle;
 }
 
-#jocqbnirni .gt_empty_group_heading {
+#cpshmmmiqn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1478,15 +1478,15 @@ city_data %>%
   vertical-align: middle;
 }
 
-#jocqbnirni .gt_from_md > :first-child {
+#cpshmmmiqn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jocqbnirni .gt_from_md > :last-child {
+#cpshmmmiqn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jocqbnirni .gt_row {
+#cpshmmmiqn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1505,7 +1505,7 @@ city_data %>%
   overflow-x: hidden;
 }
 
-#jocqbnirni .gt_stub {
+#cpshmmmiqn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1518,7 +1518,7 @@ city_data %>%
   padding-right: 5px;
 }
 
-#jocqbnirni .gt_stub_row_group {
+#cpshmmmiqn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1532,11 +1532,11 @@ city_data %>%
   vertical-align: top;
 }
 
-#jocqbnirni .gt_row_group_first td {
+#cpshmmmiqn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jocqbnirni .gt_summary_row {
+#cpshmmmiqn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1546,16 +1546,16 @@ city_data %>%
   padding-right: 5px;
 }
 
-#jocqbnirni .gt_first_summary_row {
+#cpshmmmiqn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jocqbnirni .gt_first_summary_row.thick {
+#cpshmmmiqn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jocqbnirni .gt_last_summary_row {
+#cpshmmmiqn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1565,7 +1565,7 @@ city_data %>%
   border-bottom-color: #D3D3D3;
 }
 
-#jocqbnirni .gt_grand_summary_row {
+#cpshmmmiqn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1575,7 +1575,7 @@ city_data %>%
   padding-right: 5px;
 }
 
-#jocqbnirni .gt_first_grand_summary_row {
+#cpshmmmiqn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1585,11 +1585,11 @@ city_data %>%
   border-top-color: #D3D3D3;
 }
 
-#jocqbnirni .gt_striped {
+#cpshmmmiqn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jocqbnirni .gt_table_body {
+#cpshmmmiqn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1598,7 +1598,7 @@ city_data %>%
   border-bottom-color: #D3D3D3;
 }
 
-#jocqbnirni .gt_footnotes {
+#cpshmmmiqn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1612,7 +1612,7 @@ city_data %>%
   border-right-color: #D3D3D3;
 }
 
-#jocqbnirni .gt_footnote {
+#cpshmmmiqn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1621,7 +1621,7 @@ city_data %>%
   padding-right: 5px;
 }
 
-#jocqbnirni .gt_sourcenotes {
+#cpshmmmiqn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1635,7 +1635,7 @@ city_data %>%
   border-right-color: #D3D3D3;
 }
 
-#jocqbnirni .gt_sourcenote {
+#cpshmmmiqn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1643,36 +1643,36 @@ city_data %>%
   padding-right: 5px;
 }
 
-#jocqbnirni .gt_left {
+#cpshmmmiqn .gt_left {
   text-align: left;
 }
 
-#jocqbnirni .gt_center {
+#cpshmmmiqn .gt_center {
   text-align: center;
 }
 
-#jocqbnirni .gt_right {
+#cpshmmmiqn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jocqbnirni .gt_font_normal {
+#cpshmmmiqn .gt_font_normal {
   font-weight: normal;
 }
 
-#jocqbnirni .gt_font_bold {
+#cpshmmmiqn .gt_font_bold {
   font-weight: bold;
 }
 
-#jocqbnirni .gt_font_italic {
+#cpshmmmiqn .gt_font_italic {
   font-style: italic;
 }
 
-#jocqbnirni .gt_super {
+#cpshmmmiqn .gt_super {
   font-size: 65%;
 }
 
-#jocqbnirni .gt_two_val_uncert {
+#cpshmmmiqn .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -1681,31 +1681,31 @@ city_data %>%
   margin-left: 0.1em;
 }
 
-#jocqbnirni .gt_footnote_marks {
+#cpshmmmiqn .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#jocqbnirni .gt_asterisk {
+#cpshmmmiqn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jocqbnirni .gt_slash_mark {
+#cpshmmmiqn .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#jocqbnirni .gt_fraction_numerator {
+#cpshmmmiqn .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#jocqbnirni .gt_fraction_denominator {
+#cpshmmmiqn .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -1813,17 +1813,22 @@ Unfortunately, I couldn’t find an open source API that has allergy data. But, 
 
 # So, why can’t I breathe?
 
-It seems pretty clear that it’s because my allergies are probably really bad this time of year in Houston. Even though I’ve never experienced bad allergies in winter, Houston is a completely different climate compared to other cities I’ve lived. For example, as we can see from the allergy map, tree allergy is low this time of year in Baltimore, where I grew up.
+It seems clear that my difficulty breathing is because my allergies are bad this time of year in Houston. Even though I’ve never experienced bad allergies in winter, Houston is a completely different climate compared to other cities I’ve lived. For example, as we can see from the allergy map, tree allergy is low this time of year in Baltimore, where I grew up.
 
-Even though it seems unlikely that air quality contributed to my difficulty breathing, I still learned a lot from the data!
+While it seems unlikely that air quality contributed to my difficulty breathing, I still learned a lot from the data!
+
+## Takeaways
 
 Here are a few key takeaways I’d like to share:
 
--   It is important to understand your body and take proactive steps in managing your health. For me, this means understanding when my allergies and asthma will likely be bad and that I need to be prepared with allergy medications and inhalers when needed.
-    -   For example, I love running, but now I have the AirVisual app on my phone and I check the air quality before setting off for a run (especially if it’s a longer run). If the AQI is above 50, I’ll either do a different indoor workout or I’ll postpone my run until the AQI has decreased.
+-   I should be prepared for bad allergies in the winter, at least while I’m living in Houston.
 -   I learned that the air quality in Houston *can* get bad, which could trigger asthma symptoms. So, just as a precaution I try to always have my rescue inhaler with me wherever I go.
--   As I was writing this blog, I wondered how climate change has impacted our air. Here are two articles from the CDC and EPA that warn against the potential dangers of climate change and, specifically, how climate change does negatively affect our air quality.
+-   In general, I’m now more conscious of air quality. For example, I love running, but I’ve recently downloaded the AirVisual app and I check the air quality before setting off for a run (especially if it’s a longer run). If the AQI is anything other than “Good”, I’ll either do a different indoor workout or I’ll postpone my run until the AQI has improved.
+-   Seeing the increase in AQI over the past few years in some of the cities where I’ve lived, I wondered how climate change could be impacting our air quality. Here are two articles from the CDC and EPA that discuss how climate change negatively affects our air quality:
     -   [EPA: Climate Change Impacts on Air Quality](https://www.epa.gov/climateimpacts/climate-change-impacts-air-quality)
     -   [CDC: Climate Change Decreases the Quality of the Air We Breathe](https://www.cdc.gov/climateandhealth/pubs/air-quality-final_508.pdf)
 
-<!-- I'm no expert in this matter, but I can only guess that pollution and climate change will continue to negatively impact our air quality unless we act.  -->
+As always, thanks for reading!
+
+<!-- - It is important to understand your body and take proactive steps in managing your health. For me, this means understanding when my allergies and asthma will likely be bad and that I need to be prepared with allergy medications and inhalers when needed.  -->
+<!--   -  -->
