@@ -21,7 +21,7 @@ output:
 <style type="text/css">
 
 body {
-  font-size: 15pt;
+  font-size: 14pt;
 }
 
 
@@ -33,13 +33,13 @@ p2 {
 
 
 h1 { /* Header 1 */
-  font-size: 32px;
+  font-size: 30px;
   color: DarkBlue;
   font-weight: bold;
 }
 
 h2 { /* Header 2 */
-  font-size: 24px;
+  font-size: 22px;
   color: DarkBlue;
   font-weight: bold;
 }
@@ -74,7 +74,7 @@ This podcast made me think more seriously about air quality - something I've alw
 
 So let's look at some data! I'll get my data from [Open Weather API](https://openweathermap.org/api/air-pollution). This is free, but you need to sign up in order to get an API key. 
 
-*Check out my previous blog on ["My First API: Which NFL games should I watch?"](https://jennysloane.netlify.app/blog/nfl/) for a more thorough walk through of using APIs in R*
+*Check out my previous blog on ["My First API: Which NFL games should I watch?"](https://jennysloane.netlify.app/blog/nfl/) for a more thorough walk through of using APIs in R.*
 
 ## Calling the Open Weather API
 
@@ -176,7 +176,8 @@ clean_data_function  <- function(my_data) {
   group_by(year, month, day) %>%
   summarise_at(vars(main.aqi:components.pm10), mean) %>%
   mutate(across(main.aqi:components.pm10, round, 2),
-         date = make_date(year = year, month = month, day = day))
+         date = make_date(year = year, month = month, day = day)) %>% 
+    relocate(date, .before = main.aqi) %>%
   return(clean_data)
 }
 
@@ -189,7 +190,7 @@ houston_clean %>%
 
 ## Graphing the Results
 
-An AQI score of 2 is fair with an NO2 values between 51-100 and it's recommended that "Unusually sensitive individuals should consider limiting prolonged outdoor exertion", so I've added a dashed black line to the graph where the AQI score equals 2. 
+An AQI score of 2 is "fair" with an NO2 values between 51-100 and it's recommended that "Unusually sensitive individuals should consider limiting prolonged outdoor exertion", so I've added a black dashed line to the graph where the AQI score equals 2. 
 
 ```{r}
 ggplot(houston_clean, aes(date, main.aqi, color = "#D95F02")) +
@@ -204,7 +205,7 @@ ggplot(houston_clean, aes(date, main.aqi, color = "#D95F02")) +
 ## Interpreting the Results 
 
 - It doesn't look like there are any noticeable increases in the AQI scores in the past month, so it is unlikely that air quality explains my recent asthma problems.
-- However, there are some spikes in the data where air quality exceeds a score of 2, especially last fall (September - November).
+- However, it is interesting (and perhaps a little bit concerning) to note that there are some spikes in the data where air quality exceeds a score of 2, especially last fall (September - November).
 - So I could stop here, but now I'm curious: how does Houston's AQI compare to other cities that I've lived in?... Let's find out!
 
 # Air Quality Over Time in Cities I've Lived 
@@ -285,7 +286,8 @@ ggplot(city_data, aes(date, mean_aqi, color = city)) +
     aes(label = mean_aqi), data = data_ends,
     fontface ="plain", size = 3, show.legend = F
     ) +
-  easy_remove_legend()
+  easy_remove_legend() +
+  theme(strip.text.x = element_text(size = 18))
 
 #brewer.pal(n=4,"Dark2") # #D95F02 = houston
 
@@ -294,11 +296,11 @@ ggplot(city_data, aes(date, mean_aqi, color = city)) +
 - In general, it looks like AQI scores have been increasing over the past couple of years, with the most noticeable increases in Houston and Syracuse. 
 - Remember, higher AQI means poorer air quality, so this is not a good thing! 
 - Out of these cities, it looks like Sydney has done the best job at maintaining a relatively low and stable AQI score.
-- It would be really interesting to see these results over the past 30 years... so if anyone knows of another open source API with air quality scores, please let me know!
+- It would be really interesting to see these results over the past 30 years... so if anyone knows of another open source API with air quality scores, please [let me know](https://jennysloane.netlify.app/#contact)!
 
 # **Allergies** in Houston
 
-Unfortunately, I could not find an open source API that has allergy data. But, I was able to find some useful websites from  [Pollen.com](https://www.pollen.com/research/77002) and [asthmaforecast.com](https://www.asthmaforecast.com/forecast/historic/asthma/77002). 
+Unfortunately, I couldn't find an open source API that has allergy data. But, I was able to find some useful websites: [Pollen.com](https://www.pollen.com/research/77002) and [asthmaforecast.com](https://www.asthmaforecast.com/forecast/historic/asthma/77002). 
 
 *Images are screenshots taken directly from the respective websites.*
 
@@ -306,7 +308,7 @@ Unfortunately, I could not find an open source API that has allergy data. But, I
 
 - I immediately discovered that we are approaching peak allergy season (at least for trees) in Houston.
 - Reading more on the website, I learned that the most significant allergens are: ash-leaf maple, green ash, red mulberry, and white ash.
-- This is unfortunate for me because according to my allergy scratch test in 2016, I am **very** allergic to maple and ash and it looks like my allergies may get even worse in March `r emo::ji("upset")`
+- This is unfortunate for me because according to my allergy scratch test in 2016, I am *very* allergic to maple and ash and it looks like my allergies may get even worse in March `r emo::ji("upset")`.
     
 <!-- frustrated -->
 
@@ -329,8 +331,11 @@ Even though it seems unlikely that air quality contributed to my difficulty brea
 Here are a few key takeaways I'd like to share:
 
 - It is important to understand your body and take proactive steps in managing your health. For me, this means understanding when my allergies and asthma will likely be bad and that I need to be prepared with allergy medications and inhalers when needed. 
+  - For example, I love running, but now I have the AirVisual app on my phone and I check the air quality before setting off for a run (especially if it's a longer run). If the AQI is above 50, I'll either do a different indoor workout or I'll postpone my run until the AQI has decreased.
 - I learned that the air quality in Houston *can* get bad, which could trigger asthma symptoms. So, just as a precaution I try to always have my rescue inhaler with me wherever I go. 
-- I love running, but now I have AirVisual app on my phone and I check the air quality before setting off for a run (especially if it's a longer run). If the AQI is above 50, I'll either do a different indoor workout or I'll postpone my run until the AQI has decreased.
+- As I was writing this blog, I wondered how climate change has impacted our air. Here are two articles from the CDC and EPA that warn against the potential dangers of climate change and, specifically, how climate change does negatively affect our air quality. 
+  - [EPA: Climate Change Impacts on Air Quality](https://www.epa.gov/climateimpacts/climate-change-impacts-air-quality)
+  - [CDC: Climate Change Decreases the Quality of the Air We Breathe](https://www.cdc.gov/climateandhealth/pubs/air-quality-final_508.pdf)
 
 
 <!-- I'm no expert in this matter, but I can only guess that pollution and climate change will continue to negatively impact our air quality unless we act.  -->
