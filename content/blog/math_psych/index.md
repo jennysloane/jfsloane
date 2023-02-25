@@ -4,7 +4,7 @@ external_link: https://blogs.unsw.edu.au/mathssciencechampions/blog/2019/05/the-
 image:
   caption:
   focal_point: Smart
-summary: This is a blog about my life as a mathematical psychologist (written by Emily Vohralik).
+summary: This is a blog about my life as a mathematical psychologist (written by Emily Vohralik)
 tags:
 title: Math Psych
 ---

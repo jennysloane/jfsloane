@@ -24,7 +24,7 @@ feature:
   icon_pack: fab
   name: R
   
-- description: 'I have recently started using Overleaf and learning LaTeX in 2018 for writing papers and other documents, such as my <a href="http://127.0.0.1:4321/files/cv.pdf" target="_blank" rel="noopener noreferrer" style="color: #F76F8E">CV</a>. I also believe it is a great tool for collaborations.'
+- description: 'I have recently started using Overleaf and learning LaTeX in 2018 for writing papers and other documents, such as my <a href="https://jennysloane.netlify.app/media/CV_2023.pdf" target="_blank" rel="noopener noreferrer" style="color: #F76F8E">CV</a>. I also believe it is a great tool for collaborations.'
   icon: "overleaf"
   icon_pack: ai
   name: Overleaf

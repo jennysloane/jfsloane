@@ -8,7 +8,7 @@ image:
   caption: ""
   focal_point: ""
 subtitle: 
-summary: "In this blog, I investigate whether my recent trouble with breathing could be related to air quality and/or allergies."
+summary: "In this blog, I investigate whether my recent trouble with breathing could be related to air quality and/or allergies"
 title: "Why can't I breathe?"
 toc: true
 output:
