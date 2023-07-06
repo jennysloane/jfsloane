@@ -34,6 +34,7 @@ experience:
         
         * Studying the effects of interruptions on diagnostic decision-making
         * Conducting research to improve diagnostic decision-making and reduce errors in medicine
+        * Delivered a series of 8 workshops on "Introduction to R and Programming" to over 30 employees
         
 
   - title: PhD Student
