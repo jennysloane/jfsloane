@@ -31,7 +31,7 @@ summary:
 tags:
 - Source Themes
 title: "Current State of Diagnostic Safety: Implications for Research, Practice, and Policy."
-url_code: "https://www.ahrq.gov/diagnostic-safety/resources/issue-briefs/dxsafety-current-state.html"
+url_code: ""
 url_dataset: ""
 url_pdf: "https://www.ahrq.gov/sites/default/files/wysiwyg/topics/dxsafety-current-state.pdf"
 url_poster: ""
