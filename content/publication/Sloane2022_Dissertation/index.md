@@ -24,7 +24,7 @@ summary:
 tags:
 - Source Themes
 title: "The effects of interruptions on decision-making with
-applications in medicine."
+applications in medicine"
 url_code: ""
 url_dataset: ""
 url_pdf: "https://unsworks.unsw.edu.au/bitstreams/33ae246a-6425-4a9f-a348-9d8e3e66ea7a/download"
