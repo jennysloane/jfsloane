@@ -39,7 +39,7 @@ social:
   link: https://www.linkedin.com/in/jenny-sloane/  
 
 superuser: true
-title: Jenny Sloane
+title: Jennifer Sloane
 ---
 
 I'm a postdoc fellow in Health Services Research and Development at the Center for Innovations in Quality, Effectiveness and Safety, which is associated with the Houston VA and Baylor College of Medicine. I received my BA in psychology from the University of Maryland, my Masters of Science in experimental psychology from Syracuse University, and my PhD in cognitive psychology from University of New South Wales. My research interests include improving diagnostic decision-making, reducing errors in medicine, and studying the effects of interruptions and time-pressure on medical decision-making. 
