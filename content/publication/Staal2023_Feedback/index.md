@@ -14,7 +14,7 @@ authors:
 
 date: "2023-06-19T00:00:00Z"
 doi: ""
-featured: true
+featured: false
 image:
   caption: ''
   focal_point: ""

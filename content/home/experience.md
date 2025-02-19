@@ -23,12 +23,25 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
   
 experience:
+
+  - title: Quantitative Methodologist
+    company: Houston VA and Baylor College of Medicine
+    company_url: ''
+    location: Houston
+    date_start: '2024-08-15'
+    date_end: ''
+    description: |2-
+        Responsibilities include:
+        
+        * Lead quantitative methodologist on a research project exploring the benefits and challenges to implementing an alternative 72/80 work schedule for nurses, including analyzing data with interrupted time series analysis and multilevel modeling.
+        * Converting qualitative process map data to excel spreadsheets to create quantitative datasets and using R for subsequent data analysis and visualizations.
+
   - title: Postdoc Research Fellow
     company: Houston VA and Baylor College of Medicine
     company_url: ''
     location: Houston
     date_start: '2022-08-15'
-    date_end: ''
+    date_end: '2024-08-15'
     description: |2-
         Responsibilities include:
         
