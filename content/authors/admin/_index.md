@@ -51,4 +51,4 @@ I received my BA in psychology from the University of Maryland in 2014, my Maste
 
 <!-- I have several years of experience as a teaching assistant for a range of psychology courses. I am also a member of the UNSW Women in Maths and Science Champions Program, where I participate in outreach activities to encourage and inspire women to pursue careers in math and science. -->
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/CV_2025.pdf" "newtab" >}}academic CV{{< /staticref >}} and {{< staticref "media/Resume_2025.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/CV_2026.pdf" "newtab" >}}academic CV{{< /staticref >}} and {{< staticref "media/Resume_2026.pdf" "newtab" >}}resumé{{< /staticref >}}.
